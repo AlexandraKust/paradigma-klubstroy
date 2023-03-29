@@ -1,0 +1,171 @@
+// нав.меню
+.nav {
+	&__bg {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		z-index: -5;
+		cursor: pointer;
+	}
+
+	&__body {
+		position: fixed;
+		top: 0;
+		right: -100%;
+		bottom: 0;
+		z-index: 50;
+		background: #fff;
+		padding: 4.17vw;
+		padding-right: 9.74vw;
+		overflow-y: auto;
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+		transition: right 0.7s ease-in-out;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+	&--active {
+		.nav__bg {
+			z-index: 49;
+		}
+
+		.nav__body {
+			right: 0;
+		}
+	}
+
+	&__close {
+		position: absolute;
+		top: 3.6vw;
+		right: 3.6vw;
+		width: fit-content;
+
+		svg {
+			width: 0.73vw;
+			height: 0.73vw;
+		}
+
+		path {
+			stroke: $gray-1;
+			transition: stroke 0.3s ease-in-out;
+		}
+
+
+		&:hover {
+			cursor: pointer;
+
+			path {
+				stroke: $accent-color;
+			}
+		}
+	}
+
+	&__list {
+		flex-direction: column;
+		gap: 2vw;
+		margin-bottom: 3vw;
+	}
+
+	&__link {
+		font-size: 2.5vw;
+		line-height: 3.125vw;
+		text-transform: uppercase;
+		color: $main-color;
+		transition: color 0.3s ease-in-out;
+
+		&:hover {
+			color: $accent-color;
+		}
+	}
+
+	&__row {
+		align-items: center;
+		gap: 6.25vw;
+	}
+
+	&__call {
+
+		.call__text {
+			margin: 0;
+			font-weight: 400;
+			font-size: 0.83vw;
+			line-height: 1vw;
+			text-align: left;
+		}
+
+		.call__link {
+			font-weight: 500;
+			font-size: 1.875vw;
+			line-height: 2.34vw;
+			color: $main-color;
+
+			&:hover {
+				color: $accent-color;
+			}
+		}
+	}
+
+	&__text {
+		font-size: 0.83vw;
+		line-height: 1vw;
+		margin-bottom: 0.47vw;
+
+		b {
+			display: block;
+			font-weight: 500;
+		}
+	}
+
+	&__social {
+		.social__item path {
+			fill: #fff;
+		}
+
+		.social__item-whatsapp {
+			background: #39CB59;
+		}
+
+		.social__item-telegram {
+			background: #08BBE8;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.nav {
+		&__body {
+			width: 100%;
+			padding: 2.2rem;
+			z-index: 19;
+		}
+
+		&__list {
+			padding-top: 8.7rem;
+			gap: 2rem;
+			margin-bottom: 5.6rem;
+		}
+
+		&__link {
+			font-size: 1.7rem;
+			line-height: 2.1rem;
+		}
+
+		&__social {
+			.social__item {
+				flex-basis: 3.6rem;
+				height: 3.6rem;
+
+				svg {
+					width: 1.4rem;
+					height: auto;
+				}
+			}
+		}
+	}
+}

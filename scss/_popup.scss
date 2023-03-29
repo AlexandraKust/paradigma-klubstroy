@@ -1,0 +1,302 @@
+//popup
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 50;
+	opacity: 0;
+	visibility: hidden;
+	overflow-y: auto;
+	transition: opacity 0.4s ease-in-out;
+	background-color: rgba($color: #000, $alpha: 0.7);
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&__container {
+		min-height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 50;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	&__body {
+		position: relative;
+		z-index: 60;
+		cursor: default;
+		border-radius: 0.42vw;
+		overflow: hidden;
+		color: $main-color;
+		overflow: hidden;
+		background: #fff;
+	}
+
+	&__close {
+		position: absolute;
+		top: 1.85vw;
+		right: 2.1vw;
+		z-index: 60;
+
+		svg {
+			width: 0.625vw;
+			height: 0.625vw;
+		}
+
+		path {
+			stroke: $gray-1;
+			transition: stroke 0.3s ease-in-out;
+		}
+
+		&:hover {
+			cursor: pointer;
+
+			path {
+				stroke: $accent-color;
+			}
+		}
+	}
+
+	&__title {
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+
+	&__descr {}
+
+	&__row {
+		flex-direction: column;
+		gap: 0.83vw;
+		margin-bottom: 1vw;
+	}
+
+	&__label {
+		flex-basis: auto;
+	}
+
+	&__btn {
+		height: 5.1vw;
+
+		span {
+			font-size: 0.9375vw;
+			line-height: 1.2vw;
+		}
+	}
+
+	&-request {
+		.popup__body {
+			position: relative;
+			overflow: hidden;
+			width: 48vw;
+			min-height: 28.65vw;
+			padding: 2.55vw 3.125vw 1.3vw;
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 23vw;
+				height: 100%;
+				transform: scale(-1, 1);
+				background: url('../media/img/engineer.png') 0 bottom / 100% auto no-repeat;
+			}
+		}
+
+		.popup__plate {
+			position: absolute;
+			left: 2vw;
+			bottom: 2.5vw;
+			width: 11vw;
+			padding: 0.78125vw 1.15vw;
+			font-size: 1vw;
+			line-height: 120%;
+			color: #fff;
+			overflow: hidden;
+			border-radius: 0.42vw;
+		}
+
+		.popup__plate-text {
+			position: relative;
+			z-index: 2;
+		}
+
+		.popup__plate-bg {
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 1;
+			width: 100%;
+			height: 100%;
+			background: rgba(255, 255, 255, 0.16);
+			backdrop-filter: blur(7.5px);
+			border: 0.052vw solid rgba(219, 222, 235, 0.06);
+		}
+
+		.popup__content {
+			width: 20.8vw;
+			margin-left: auto;
+		}
+
+		.popup__title {
+			margin-bottom: 1.458vw;
+			font-size: 2vw;
+			line-height: 1;
+		}
+
+		.popup__descr {
+			margin-bottom: 0.83vw;
+			font-size: 1.25vw;
+			line-height: 125%;
+			color: $gray-1;
+			padding-right: 3vw;
+
+			span {
+				color: $accent-color;
+			}
+		}
+	}
+
+	&-wait {
+		.popup__body {
+			position: relative;
+			width: 53.125vw;
+			min-height: 30vw;
+			padding: 2.5vw 7.4vw 1.93vw 2.5vw;
+			overflow: visible;
+			background: $gray-4;
+		}
+
+		.popup__img {
+			position: absolute;
+			top: 2vw;
+			right: -7.8vw;
+			z-index: 1;
+		}
+
+		.popup__content {
+			position: relative;
+			z-index: 2;
+		}
+
+		.popup__title {
+			margin-bottom: 1.25vw;
+			font-size: 2.6vw;
+			line-height: 140%;
+			color: $main-color;
+		}
+
+		.popup__subtitle {
+			margin-bottom: 0.42vw;
+			font-size: 1.25vw;
+			line-height: 183%;
+			text-transform: uppercase;
+		}
+
+		.popup__descr {
+			max-width: 29vw;
+			margin-bottom: 1.25vw;
+			font-size: 2vw;
+			line-height: 125%;
+			text-transform: uppercase;
+
+			span {
+				color: $accent-color;
+			}
+		}
+
+		.popup__row {
+			flex-direction: row;
+			justify-content: space-between;
+			margin-bottom: 1.61vw;
+		}
+
+		.popup__label {
+			flex: 0 0 20.83vw;
+		}
+
+		.popup__btn {
+			width: 100%;
+			margin-bottom: 1.35vw;
+		}
+
+		.agree {
+			align-items: center;
+
+			&__text {
+				font-size: 0.625vw;
+				line-height: 150%;
+			}
+		}
+
+		.select {
+			.custom-select-opener {
+				padding: 1.4vw 1.9vw;
+			}
+		}
+
+		.select-social__img {
+			right: 0.9vw;
+		}
+	}
+
+	&-conf {
+		.popup__close {
+			top: 0.8vw;
+			right: 0.8vw;
+		}
+
+		.popup__container {
+			padding: 2.5vw 0;
+		}
+
+		.popup__body {
+			width: 80vw;
+			height: fit-content;
+			padding: 2.2vw;
+		}
+
+		.popup__map {
+			width: 100%;
+			height: 100%;
+			border: 0;
+		}
+	}
+
+	&-map {
+		.popup__close {
+			top: 0.8vw;
+			right: 0.8vw;
+		}
+
+		.popup__body {
+			width: 80vw;
+			height: 31.3vw;
+			padding: 2.2vw;
+		}
+
+		.popup__map {
+			width: 100%;
+			height: 100%;
+			border: 0;
+		}
+	}
+}

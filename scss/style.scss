@@ -1,0 +1,26 @@
+@import "_nullstyle.scss";
+@import "_variables.scss";
+@import "_fonts.scss";
+
+html {
+	font-size: 10px;
+}
+
+body {
+	min-width: 320px;
+	font-family: 'Cera Pro', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	color: $main-color;
+	overflow-x: hidden;
+
+	&.lock {
+		overflow: hidden;
+	}
+}
+
+@import "_header.scss";
+@import "_nav.scss";
+@import "_hero.scss";
+
+@import "_popup.scss";

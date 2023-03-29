@@ -1,0 +1,225 @@
+// шапка
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 20;
+  width: 100%;
+
+  &--fixed,
+  &--active {
+    background: #fff;
+    box-shadow: 0 0.42vw 1vw rgba(0, 0, 0, 0.1);
+
+    .header__row {
+      padding: 1.4vw 0;
+      color: $main-color;
+    }
+
+    .header__logo path:nth-child(-n+4) {
+      fill: $main-color;
+    }
+
+    .header__social .social__item path {
+      fill: #fff;
+    }
+
+    .header__social .social__item-whatsapp {
+      background: #39CB59;
+    }
+
+    .header__social .social__item-telegram {
+      background: #08BBE8;
+    }
+
+    .header__call .call__link {
+      color: currentColor;
+
+      &:hover {
+        color: $accent-color;
+      }
+    }
+
+    .header__btn {
+      color: currentColor;
+      border-color: currentColor;
+    }
+
+  }
+
+  &__row {
+    align-items: center;
+    padding: 1.65vw 0;
+    color: #fff;
+  }
+
+  &__logo {
+    margin-right: auto;
+    align-items: center;
+  }
+
+  &__logo-img {
+    flex: 0 0 11.3vw;
+    margin-right: 1.71875vw;
+
+    svg {
+      width: 100%;
+
+      &:last-child {
+        display: none;
+      }
+    }
+
+    path {
+      fill: #fff;
+
+      &:nth-child(n+5) {
+        fill: $accent-color;
+      }
+    }
+  }
+
+  &__logo-descr {
+    flex: 0 0 12.24vw;
+    font-size: 0.83vw;
+    line-height: 144%;
+  }
+
+  &__address {
+    flex: 0 0 7.3vw;
+    margin-right: 2vw;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -1.4vw;
+      top: 0;
+      width: 0.73vw;
+      height: 0.885vw;
+      background: url('../media/svg/map.svg') 0 0 / 100% 100% no-repeat;
+    }
+  }
+
+  &__address-text {
+    font-size: 0.73vw;
+    line-height: 143%;
+  }
+
+  &__address-link {
+    font-size: 0.625vw;
+    line-height: 167%;
+  }
+
+  &__social {
+    flex-shrink: 0;
+    // margin-right: 2.448vw;
+    margin-right: 5.7vw;
+  }
+
+  &__call {
+    margin-right: 2.448vw;
+    flex-shrink: 0;
+  }
+
+  &__btn {
+    padding: 1.1vw 1.5625vw;
+    border: 0.052vw solid #fff;
+    font-family: 'Euclid Flex';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.73vw;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #fff;
+    transition-property: color, border-color;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      border-color: $accent-color;
+      color: $accent-color;
+    }
+  }
+}
+
+.call {
+
+  &__text {
+    margin-bottom: 0.2vw;
+    font-size: 0.73vw;
+    line-height: 0.9375vw;
+    text-align: center;
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 1.5625vw;
+    line-height: 1.98vw;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+
+    &--fixed,
+    &--active {
+      .header__row {
+        padding: 1.3rem 0;
+      }
+    }
+
+    &__row {
+      padding: 2.6rem 0;
+    }
+
+    &__logo-img {
+      flex: 0 0 4.4rem;
+      height: 2.268rem;
+      margin-right: 0;
+
+      svg {
+        &:first-child {
+          display: none;
+        }
+
+        &:last-child {
+          display: block;
+        }
+      }
+    }
+
+    &__call {
+      margin-right: 6.8rem;
+    }
+
+    .text-link {
+      font-size: 0.6rem;
+      line-height: 0.8rem;
+      margin: 0 auto;
+    }
+  }
+
+  .call {
+    &__text {
+      margin-bottom: 0.2rem;
+      font-size: 0.6rem;
+      line-height: 0.8rem;
+    }
+
+    &__link {
+      display: block;
+      margin-bottom: 0.2rem;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      text-align: center;
+    }
+  }
+}
