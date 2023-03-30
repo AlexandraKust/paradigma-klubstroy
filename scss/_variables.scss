@@ -6,6 +6,10 @@ $gray-3: #DDE0E9;
 $gray-4: #F1F5F8;
 $gray-5: #DBDEEB;
 
+html {
+	font-size: 10px;
+}
+
 @keyframes blick {
 	0% {
 		left: -100%;
@@ -72,6 +76,7 @@ $gray-5: #DBDEEB;
 	position: relative;
 	display: flex;
 	align-items: center;
+	padding: 1.25vw 2.4vw;
 	overflow: hidden;
 	transition-property: color, background, transform;
 	transition: 0.3s ease-in-out;
@@ -458,6 +463,10 @@ $gray-5: #DBDEEB;
 
 
 @media (max-width: 768px) {
+	html {
+		font-size: 3.125vw;
+	}
+
 	.desktop {
 		display: none;
 	}
@@ -470,5 +479,23 @@ $gray-5: #DBDEEB;
 		max-width: 100%;
 		padding: 0 2.2rem;
 		margin: 0 auto;
+	}
+
+	.main-btn {
+		padding: 1.6rem 3rem;
+
+		span {
+			font-size: 1rem;
+			line-height: 1.3rem;
+			letter-spacing: 0;
+		}
+	}
+
+	.btn-blick {
+
+		.main-btn:not(:disabled) &::after,
+		.main-btn:not(.disabled) &::after {
+			width: 2rem;
+		}
 	}
 }

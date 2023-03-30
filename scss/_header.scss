@@ -124,6 +124,7 @@
   }
 
   &__btn {
+    flex-shrink: 0;
     padding: 1.1vw 1.5625vw;
     border: 0.052vw solid #fff;
     font-family: 'Euclid Flex';

@@ -28,7 +28,7 @@
   &__descr {
     position: relative;
     flex: 0 0 23.8vw;
-    padding: 3.2vw 2.7vw 0 2.86vw;
+    padding: 2.5vw 2.7vw 0 2.86vw;
     border-top: 0.052vw solid rgba(226, 231, 238, 0.2);
 
     &::before {
@@ -52,7 +52,6 @@
 
   &__btn {
     width: 100%;
-    padding: 1.25vw 2.4vw;
     margin-bottom: 0.25vw;
     font-weight: 700;
     font-size: 0.73vw;
@@ -65,7 +64,6 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    // gap: 5.625vw;
     gap: 5.1vw;
     padding-left: 1.93vw;
 
@@ -151,23 +149,120 @@
 
 @media (max-width: 768px) {
   .hero {
-    &__burger-container {
-      position: fixed;
-      width: 5.8rem;
-      height: 7.5rem;
-      z-index: 51;
-      border-width: 0.1rem;
+    padding: 9.1rem 0 2.9rem;
+    background: $main-color url('../media/img/hero-bg-mobile.png') 0 0 / 100% 100% no-repeat;
 
-      &.burger--fixed {
-        height: 6.1rem;
+    &__row {
+      flex-direction: column;
+      align-items: start;
+    }
 
-        .hero__burger span {
-          background: $main-color;
+    &__title {
+      margin-bottom: 3.6rem;
+      padding: 0;
+      flex-basis: auto;
+      font-size: 2.4rem;
+      line-height: 117%;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &__descr {
+      padding: 0;
+      flex-basis: auto;
+      border: none;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &__subtitle {
+      margin-bottom: 2rem;
+      padding-right: 1rem;
+      font-size: 1.4rem;
+      line-height: 143%;
+    }
+
+    &__btn {
+      margin-bottom: 2.4rem;
+      z-index: 2;
+
+      span {
+        font-size: 1.2rem;
+        line-height: 133%;
+        font-weight: 700;
+        color: #2E6BD1;
+        letter-spacing: 0.1em;
+      }
+
+      &:hover {
+        span {
+          color: #fff;
         }
       }
     }
 
+    &__benefits {
+      gap: 1.2rem;
+      padding-left: 1.8rem;
+
+      &::after {
+        top: -3rem;
+        bottom: -3rem;
+        left: 0.8rem;
+        width: 0.1rem;
+        height: auto;
+      }
+    }
+
+    &__benefits-item {
+      width: 15.4rem;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+
+      &::before {
+        width: 0.5rem;
+        height: 0.5rem;
+        left: -1.2rem;
+      }
+
+      &:nth-child(2) {
+        width: 17.4rem;
+      }
+
+      &:last-child {
+        width: 15.4rem;
+      }
+    }
+
+    &__burger-container {
+      width: 5.8rem;
+      border-width: 0.1rem;
+    }
+
     &__burger {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 51;
+      height: 7.5rem;
+      width: 5.8rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      &.burger--fixed {
+        height: 6.1rem;
+
+        span {
+          background: $main-color;
+        }
+      }
+
       span {
         height: 0.2rem;
         border-radius: 0.1rem;
@@ -179,6 +274,8 @@
 
         &:last-child {
           width: 1rem;
+          position: relative;
+          left: -0.2rem;
         }
       }
 

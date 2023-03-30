@@ -92,6 +92,45 @@ h6 {
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "Cera Pro";
+  src: local("CeraPro-Light"), url("../fonts/CeraPro-Light.woff2") format("woff2"), url("../fonts/CeraPro-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cera Pro";
+  src: local("CeraPro-Medium"), url("../fonts/CeraPro-Medium.woff2") format("woff2"), url("../fonts/CeraPro-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cera Pro";
+  src: local("CeraPro-Regular"), url("../fonts/CeraPro-Regular.woff2") format("woff2"), url("../fonts/CeraPro-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cera Pro";
+  src: local("CeraPro-Bold"), url("../fonts/CeraPro-Bold.woff2") format("woff2"), url("../fonts/CeraPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Euclid Flex";
+  src: local("Euclid Flex Medium"), local("EuclidFlexMedium"), url("../fonts/EuclidFlexMedium.woff2") format("woff2"), url("../fonts/EuclidFlexMedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+html {
+  font-size: 10px;
+}
+
 @-webkit-keyframes blick {
   0% {
     left: -100%;
@@ -183,6 +222,7 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 1.25vw 2.4vw;
   overflow: hidden;
   -webkit-transition-property: color, background, -webkit-transform;
   transition-property: color, background, -webkit-transform;
@@ -591,6 +631,9 @@ h6 {
 }
 
 @media (max-width: 768px) {
+  html {
+    font-size: 3.125vw;
+  }
   .desktop {
     display: none;
   }
@@ -602,46 +645,18 @@ h6 {
     padding: 0 2.2rem;
     margin: 0 auto;
   }
+  .main-btn {
+    padding: 1.6rem 3rem;
+  }
+  .main-btn span {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    letter-spacing: 0;
+  }
+  .main-btn:not(:disabled) .btn-blick::after, .main-btn:not(.disabled) .btn-blick::after {
+    width: 2rem;
+  }
 }
-@font-face {
-  font-family: "Cera Pro";
-  src: local("CeraPro-Light"), url("../fonts/CeraPro-Light.woff2") format("woff2"), url("../fonts/CeraPro-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Cera Pro";
-  src: local("CeraPro-Medium"), url("../fonts/CeraPro-Medium.woff2") format("woff2"), url("../fonts/CeraPro-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Cera Pro";
-  src: local("CeraPro-Regular"), url("../fonts/CeraPro-Regular.woff2") format("woff2"), url("../fonts/CeraPro-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Cera Pro";
-  src: local("CeraPro-Bold"), url("../fonts/CeraPro-Bold.woff2") format("woff2"), url("../fonts/CeraPro-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Euclid Flex";
-  src: local("Euclid Flex Medium"), local("EuclidFlexMedium"), url("../fonts/EuclidFlexMedium.woff2") format("woff2"), url("../fonts/EuclidFlexMedium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-html {
-  font-size: 10px;
-}
-
 body {
   min-width: 320px;
   font-family: "Cera Pro", sans-serif;
@@ -766,6 +781,8 @@ body.lock {
       flex-shrink: 0;
 }
 .header__btn {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   padding: 1.1vw 1.5625vw;
   border: 0.052vw solid #fff;
   font-family: "Euclid Flex";
@@ -1025,7 +1042,7 @@ body.lock {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 23.8vw;
           flex: 0 0 23.8vw;
-  padding: 3.2vw 2.7vw 0 2.86vw;
+  padding: 2.5vw 2.7vw 0 2.86vw;
   border-top: 0.052vw solid rgba(226, 231, 238, 0.2);
 }
 .hero__descr::before {
@@ -1046,7 +1063,6 @@ body.lock {
 }
 .hero__btn {
   width: 100%;
-  padding: 1.25vw 2.4vw;
   margin-bottom: 0.25vw;
   font-weight: 700;
   font-size: 0.73vw;
@@ -1145,17 +1161,115 @@ body.lock {
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding: 9.1rem 0 2.9rem;
+    background: #363F4C url("../media/img/hero-bg-mobile.png") 0 0/100% 100% no-repeat;
+  }
+  .hero__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .hero__title {
+    margin-bottom: 3.6rem;
+    padding: 0;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    font-size: 2.4rem;
+    line-height: 117%;
+  }
+  .hero__title::after {
+    display: none;
+  }
+  .hero__descr {
+    padding: 0;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    border: none;
+  }
+  .hero__descr::before {
+    display: none;
+  }
+  .hero__subtitle {
+    margin-bottom: 2rem;
+    padding-right: 1rem;
+    font-size: 1.4rem;
+    line-height: 143%;
+  }
+  .hero__btn {
+    margin-bottom: 2.4rem;
+    z-index: 2;
+  }
+  .hero__btn span {
+    font-size: 1.2rem;
+    line-height: 133%;
+    font-weight: 700;
+    color: #2E6BD1;
+    letter-spacing: 0.1em;
+  }
+  .hero__btn:hover span {
+    color: #fff;
+  }
+  .hero__benefits {
+    gap: 1.2rem;
+    padding-left: 1.8rem;
+  }
+  .hero__benefits::after {
+    top: -3rem;
+    bottom: -3rem;
+    left: 0.8rem;
+    width: 0.1rem;
+    height: auto;
+  }
+  .hero__benefits-item {
+    width: 15.4rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+  .hero__benefits-item::before {
+    width: 0.5rem;
+    height: 0.5rem;
+    left: -1.2rem;
+  }
+  .hero__benefits-item:nth-child(2) {
+    width: 17.4rem;
+  }
+  .hero__benefits-item:last-child {
+    width: 15.4rem;
+  }
   .hero__burger-container {
-    position: fixed;
     width: 5.8rem;
-    height: 7.5rem;
-    z-index: 51;
     border-width: 0.1rem;
   }
-  .hero__burger-container.burger--fixed {
+  .hero__burger {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 51;
+    height: 7.5rem;
+    width: 5.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .hero__burger.burger--fixed {
     height: 6.1rem;
   }
-  .hero__burger-container.burger--fixed .hero__burger span {
+  .hero__burger.burger--fixed span {
     background: #363F4C;
   }
   .hero__burger span {
@@ -1168,6 +1282,8 @@ body.lock {
   }
   .hero__burger span:last-child {
     width: 1rem;
+    position: relative;
+    left: -0.2rem;
   }
   .hero__burger:hover span:first-child, .hero__burger:active span:first-child {
     width: 1rem;

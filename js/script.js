@@ -2,7 +2,8 @@
 var myScroll;
 function loaded() {
 	myScroll = new IScroll('.main', {
-		disablePointer: true
+		disablePointer: true,
+		disableMouse: true,
 	});
 }
 
@@ -34,7 +35,7 @@ burger.addEventListener('click', function () {
 	})
 
 	if (window.innerWidth < 768 && !header.classList.contains('header--fixed')) {
-		burger.parentNode.classList.toggle('burger--fixed');
+		burger.classList.toggle('burger--fixed');
 	}
 })
 
@@ -91,18 +92,18 @@ popups.forEach(function (popup) {
 
 // прилипание шапки
 window.addEventListener('scroll', function () {
-	let headerRowHeight = header.offsetHeight;
+	// let headerRowHeight = header.offsetHeight;
 
-	if (window.pageYOffset > headerRowHeight) {
+	if (window.pageYOffset > 20) {
 		header.classList.add('header--fixed');
 	} else {
 		header.classList.remove('header--fixed');
 	}
 
 	if (header.classList.contains('header--fixed') && window.innerWidth < 768) {
-		burger.parentNode.classList.add('burger--fixed');
+		burger.classList.add('burger--fixed');
 	} else {
-		burger.parentNode.classList.remove('burger--fixed');
+		burger.classList.remove('burger--fixed');
 	}
 });
 
