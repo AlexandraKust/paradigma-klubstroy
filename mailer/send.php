@@ -5,7 +5,6 @@ require 'class.smtp.php';
 // данные
 $phone = $_POST['phone'];
 $social = $_POST['social'];
-$material = $_POST['material'];
 
 $question_1 = $_POST['title-1'];
 $answer_1 = $_POST["quiz1"];
@@ -13,39 +12,30 @@ $answer_1 = $_POST["quiz1"];
 $question_2 = $_POST['title-2'];
 $answer_2 = $_POST['quiz2'];
 
+$question_2_2 = $_POST['title-2_2'];
+$answer_2_2 = $_POST['quiz2_2'];
+
 $question_3 = $_POST['title-3'];
-$answer_3all = $_POST['quiz3'];
-for($a = 0; $a<count($answer_3all); $a++) {
-$answer_3 .= $answer_3all[$a].', ';
-}
+$answer_3 = $_POST['quiz3'];
+
 $question_4 = $_POST['title-4'];
-$answer_4all = $_POST['quiz4'];
-for($a = 0; $a<count($answer_4all); $a++) {
-$answer_4 .= $answer_4all[$a].', ';
-}
+$answer_4 = $_POST['quiz4'];
+
 $question_5 = $_POST['title-5'];
 $answer_5 = $_POST['quiz5'];
 
 $question_6 = $_POST['title-6'];
 $answer_6 = $_POST['quiz6'];
 
-$question_7 = $_POST['title-7'];
-$answer_7 = $_POST['quiz7'];
 
 if ($_POST['formname'] == 'callback') {
 $msg = '
 Пользователь заказал обратный звонок. <br>
 Телефон: <b>' . $phone .' </b><br>
 ';
-} else if ($_POST['formname'] == 'getcatalog') {
-$msg = '
-Пользователь просит прислать каталог <b> ' . $material .' </b>.<br>
-Телефон: <b> ' . $phone .' </b><br>
-Способ связи: <b> ' . $social . ' </b>
-';
 } else if ($_POST['formname'] == 'how') {
 $msg = '
-Пользователь просит прислать каталог "Как правильно выбрать памятник" <br>
+Пользователь просит прислать каталог "Топ-7 советов как выбрать систему отопления раз и навсегда" <br>
 Телефон: <b> ' . $phone .' </b><br>
 Способ связи: <b> ' . $social . ' </b>
 ';
@@ -53,12 +43,12 @@ $msg = '
 $msg = '
 Пользователь прошёл тест: <br>
 1. ' . $question_1 . ' Ответ: <b>' . $answer_1 . ' </b><br>
-2. ' . $question_2 . ' Ответ: <b>' . $answer_2 . ' </b><br>
+2.1. ' . $question_2 . ' Ответ: <b>' . $answer_2 . ' </b><br>
+2.2. ' . $question_2_2 . ' Ответ: <b>' . $answer_2_2 . ' </b><br>
 3. ' . $question_3 . ' Ответ: <b>' . $answer_3 . ' </b><br>
 4. ' . $question_4 . ' Ответ: <b>' . $answer_4 . ' </b><br>
 5. ' . $question_5 . ' Ответ: <b>' . $answer_5 . ' </b><br>
 6. ' . $question_6 . ' Ответ: <b>' . $answer_6 . ' </b><br>
-7. ' . $question_7 . ' Ответ: <b>' . $answer_7 . ' </b><br>
 <br>
 Телефон: <b> ' . $phone .' </b><br>
 Способ связи: <b> ' . $social . ' </b>

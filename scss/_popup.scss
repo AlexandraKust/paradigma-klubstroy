@@ -5,7 +5,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	z-index: 50;
+	z-index: 52;
 	opacity: 0;
 	visibility: hidden;
 	overflow-y: auto;
@@ -32,7 +32,7 @@
 		bottom: 0;
 		width: 100%;
 		height: 100%;
-		z-index: 50;
+		z-index: 52;
 
 		&:hover {
 			cursor: pointer;
@@ -80,8 +80,6 @@
 		text-transform: uppercase;
 	}
 
-	&__descr {}
-
 	&__row {
 		flex-direction: column;
 		gap: 0.83vw;
@@ -112,6 +110,7 @@
 			&::before {
 				content: '';
 				position: absolute;
+				z-index: -1;
 				left: 0;
 				bottom: 0;
 				width: 23vw;
@@ -272,12 +271,7 @@
 			width: 80vw;
 			height: fit-content;
 			padding: 2.2vw;
-		}
-
-		.popup__map {
-			width: 100%;
-			height: 100%;
-			border: 0;
+			font-size: 1.1vw;
 		}
 	}
 
@@ -297,6 +291,93 @@
 			width: 100%;
 			height: 100%;
 			border: 0;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.popup {
+		&__body {
+			border-radius: 0.1rem;
+		}
+
+		&__close {
+			top: 1rem;
+			right: 1rem;
+
+			svg {
+				width: 1rem;
+				height: 1rem;
+			}
+		}
+
+		&__row {
+			gap: 0.8rem;
+		}
+
+		&__btn {
+			height: auto;
+			margin-bottom: 0.8rem;
+
+			span {
+				font-size: inherit;
+				line-height: inherit;
+			}
+		}
+
+		&-request {
+			.popup__body {
+				width: 80%;
+				min-height: 30rem;
+				padding: 2.3rem 1.5rem 23rem;
+
+				&::before {
+					left: 50%;
+					width: 75%;
+					transform: scale(-1, 1) translateX(50%);
+				}
+			}
+
+			.popup__plate {
+				left: 4rem;
+				bottom: 2rem;
+				width: 11rem;
+				padding: 0.7rem 1.15rem;
+				font-size: 1rem;
+			}
+
+			.popup__content {
+				width: 100%;
+				margin: 0;
+			}
+
+			.popup__title {
+				margin-bottom: 1.2rem;
+				font-size: 2rem;
+			}
+
+			.popup__descr {
+				margin-bottom: 1.5rem;
+				font-size: 1.4rem;
+				padding-right: 0;
+			}
+		}
+
+		&-conf {
+			.popup__close {
+				top: 1rem;
+				right: 1rem;
+
+				svg {
+					width: 1rem;
+					height: 1rem;
+				}
+			}
+
+			.popup__body {
+				padding: 2.3rem 1.5rem 2rem;
+				font-size: 0.6rem;
+			}
 		}
 	}
 }

@@ -28,7 +28,7 @@
   &__descr {
     position: relative;
     flex: 0 0 23.8vw;
-    padding: 2.5vw 2.7vw 0 2.86vw;
+    padding: 3.2vw 2.7vw 0 2.86vw;
     border-top: 0.052vw solid rgba(226, 231, 238, 0.2);
 
     &::before {
@@ -53,11 +53,14 @@
   &__btn {
     width: 100%;
     margin-bottom: 0.25vw;
-    font-weight: 700;
-    font-size: 0.73vw;
-    line-height: 150%;
     text-align: center;
-    letter-spacing: 0.1em;
+
+    span {
+      font-weight: 700;
+      font-size: 0.73vw;
+      line-height: 150%;
+      letter-spacing: 0.1em;
+    }
   }
 
   &__benefits {
@@ -149,7 +152,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 9.1rem 0 2.9rem;
+    padding: 8.9rem 0 2.9rem;
     background: $main-color url('../media/img/hero-bg-mobile.png') 0 0 / 100% 100% no-repeat;
 
     &__row {
@@ -158,10 +161,9 @@
     }
 
     &__title {
-      margin-bottom: 3.6rem;
+      margin-bottom: 3.7rem;
       padding: 0;
       flex-basis: auto;
-      font-size: 2.4rem;
       line-height: 117%;
 
       &::after {
@@ -180,7 +182,7 @@
     }
 
     &__subtitle {
-      margin-bottom: 2rem;
+      margin-bottom: 2.1rem;
       padding-right: 1rem;
       font-size: 1.4rem;
       line-height: 143%;
