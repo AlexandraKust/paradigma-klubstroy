@@ -512,3 +512,64 @@ if (inputCount) {
 		}
 	})
 }
+
+
+// кнопка-стрелка внутри карточки
+let arrBtn = document.querySelectorAll('.arrow-btn');
+arrBtn.forEach(function (arrow) {
+	arrow.addEventListener('click', function () {
+		arrow.classList.toggle('active');
+		arrow.closest('li').classList.toggle('active');
+	})
+})
+
+// слайдеры-портфолио
+let slidersAll = document.querySelectorAll('.portfolio__swiper');
+slidersAll.forEach(function (item) {
+	let sliderThumbs = item.parentNode.querySelector('.portfolio__swiper-thumbs');
+
+	let swiperThumbs = new Swiper(sliderThumbs, {
+		// spaceBetween: 10,
+		slidesPerView: 3,
+		direction: 'vertical',
+		freeMode: true,
+		watchSlidesProgress: true,
+	});
+
+	let swiper = new Swiper(item, {
+		loop: false,
+		speed: 600,
+		touchRatio: 1,
+		slidesPerView: 1,
+
+		thumbs: {
+			swiper: swiperThumbs,
+		},
+
+		navigation: {
+			nextEl: item.querySelector('.slider-btn-next'),
+			prevEl: item.querySelector('.slider-btn-prev'),
+		},
+	});
+})
+
+
+// кнопка показать еще
+let btnMore = document.querySelectorAll('.btn-more');
+btnMore.forEach(function (item) {
+	let btnParent = item.parentNode.querySelector('ul');
+	let listItem = btnParent.querySelectorAll('li');
+
+	if (listItem.length < 5) {
+		item.classList.add('hidden');
+	}
+	if (item) {
+		item.addEventListener('click', function () {
+			listItem.forEach(function (li) {
+				li.classList.add('visible');
+			})
+			item.classList.add('hidden');
+		})
+	}
+});
+

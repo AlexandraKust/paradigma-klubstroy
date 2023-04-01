@@ -1,4 +1,4 @@
-$main-color: #363F4C;
+$main-color: #363f4c;
 $accent-color: #3B82E0;
 $gray-1: #959AAF;
 $gray-2: #8494AA;
@@ -66,11 +66,6 @@ html {
 .d-none {
 	display: none;
 }
-
-.mobile {
-	display: none;
-}
-
 
 // заголовки секций
 .section-title {
@@ -375,7 +370,58 @@ html {
 }
 
 .arrow-btn,
-.slider-btn {}
+.slider-btn {
+	width: 1.823vw;
+	height: 1.823vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.arrow-btn {
+	background-color: #fff;
+
+	path {
+		fill: $accent-color;
+		transition: fill 0.3s ease-in-out;
+	}
+
+	svg {
+		width: 0.46875vw;
+		height: 0.46875vw;
+	}
+}
+
+.slider-btn {
+	background-color: $accent-color;
+
+	path {
+		fill: #fff;
+		transition: fill 0.3s ease-in-out;
+	}
+
+	svg {
+		width: 0.73vw;
+		height: 0.677vw;
+	}
+
+	&:hover {
+		background: darken($color: $accent-color, $amount: 20%);
+	}
+
+	&.swiper-button-disabled {
+		background: #F1F5F8;
+
+		path {
+			fill: #C8D4DD;
+		}
+	}
+
+	&.swiper-button-disabled:hover {
+		cursor: default;
+	}
+}
 
 .select {
 	width: 100%;
@@ -513,6 +559,33 @@ html {
 	}
 }
 
+.hint {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1vw;
+	width: 100%;
+
+	&__text {
+		color: $gray-2;
+	}
+
+	&__icon {
+		width: 0.625vw;
+		height: 0.677vw;
+		background: url('../media/svg/hand.svg') 0 0 / 100% 100% no-repeat;
+	}
+}
+
+.mobile {
+	display: none;
+}
+
+.btn-more {
+	&.hidden {
+		display: none;
+	}
+}
 
 @media (max-width: 768px) {
 	html {
@@ -524,7 +597,7 @@ html {
 	}
 
 	.mobile {
-		display: block;
+		display: flex;
 	}
 
 	.container {
@@ -664,6 +737,30 @@ html {
 		&__link {
 			font-size: 0.8rem;
 			line-height: 125%;
+		}
+	}
+
+	.hint {
+		gap: 1rem;
+
+		&__icon {
+			width: 1.1rem;
+			height: 1.2rem;
+		}
+
+		&__text {
+			font-size: 0.8rem;
+		}
+	}
+
+	.arrow-btn,
+	.slider-btn {
+		width: 2rem;
+		height: 2rem;
+
+		svg {
+			width: 0.492rem;
+			height: 0.492rem;
 		}
 	}
 }
