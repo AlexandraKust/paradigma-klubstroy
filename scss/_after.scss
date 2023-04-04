@@ -1,0 +1,82 @@
+.after {
+	padding-top: 6.61vw;
+	padding-bottom: 3.3vw;
+
+	&__row {
+		justify-content: space-between;
+	}
+
+	&__text {
+		flex: 0 1 23.5vw;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__title {
+		margin-top: -1vw;
+	}
+
+	&__descr {
+		padding-right: 4vw;
+		font-size: 1.25vw;
+		line-height: 142%;
+		color: $gray-1;
+	}
+
+	&__images {
+		flex: 0 1 54.6875vw;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 13.28125vw 13.28125vw;
+		column-gap: 2.6vw;
+		row-gap: 1.51vw;
+	}
+
+	&__images-big {
+		grid-row: 1 / 3;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__images-small img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+@media (max-width: 768px) {
+	.after {
+		padding-top: 4.4rem;
+		padding-bottom: 2.2rem;
+
+		&__row {
+			flex-direction: column;
+			gap: 2.5rem;
+		}
+
+		&__text {
+			flex-basis: auto;
+		}
+
+		&__title {
+			margin-bottom: 1.4rem;
+		}
+
+		&__descr {
+			font-size: 1.4rem;
+			line-height: 129%;
+		}
+
+		&__images {
+			flex-basis: auto;
+			grid-template-columns: 14.9rem 1fr;
+			grid-template-rows: 7.5rem 10.5rem;
+			gap: 1.5rem;
+		}
+	}
+}

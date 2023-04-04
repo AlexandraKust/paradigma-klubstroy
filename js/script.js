@@ -573,3 +573,10 @@ btnMore.forEach(function (item) {
 	}
 });
 
+// accordion
+let accordionItem = document.querySelectorAll('.accordion__item');
+accordionItem.forEach(function (item) {
+	item.addEventListener('click', function () {
+		item.classList.toggle('active')
+	})
+})

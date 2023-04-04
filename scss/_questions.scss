@@ -1,0 +1,169 @@
+.questions {
+	padding-top: 1.3vw;
+	padding-bottom: 3vw;
+
+	&__row {
+		justify-content: space-between;
+	}
+
+	&__caption {
+		flex: 0 1 23.9vw;
+		padding-top: 1vw;
+	}
+
+	&__title {
+		margin-bottom: 1.5vw;
+	}
+
+	&__btn {
+		width: fit-content;
+		align-items: center;
+		gap: 1.25vw;
+		padding: 1.48vw 2vw;
+		background-color: #39CB59;
+		font-weight: 500;
+		font-size: 0.9375vw;
+		line-height: 1.2vw;
+		text-transform: uppercase;
+		color: #fff;
+
+		path {
+			fill: #fff;
+		}
+
+		svg {
+			width: 1.82vw;
+		}
+
+		transition: background 0.3s ease-in-out,
+		color 0.3s ease-in-out;
+
+		&:hover {
+			background: darken($color: #39CB59, $amount: 20%);
+		}
+	}
+
+	&__accordions {
+		flex: 0 0 54.6875vw;
+		justify-content: space-between;
+	}
+
+
+	@media (max-width: 768px) {
+		padding: 2rem 0 2.2rem;
+
+		&__row {
+			position: relative;
+			flex-direction: column;
+			padding-bottom: 6.4rem;
+		}
+
+		&__caption {
+			padding-top: 0;
+			flex-basis: auto;
+		}
+
+		&__title {
+			margin-bottom: 1.3rem;
+		}
+
+		&__btn {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			padding: 1.4rem;
+			justify-content: center;
+			gap: 1.2rem;
+			font-size: 1rem;
+			line-height: 1.3rem;
+
+			svg {
+				width: 1.6rem;
+			}
+		}
+
+		&__accordions {
+			flex-direction: column;
+			flex-basis: auto;
+		}
+	}
+}
+
+.accordion {
+	flex: 0 0 calc(50% - 1.3vw);
+
+	&__item {
+		border-bottom: 0.052vw solid $gray-5;
+		position: relative;
+
+		&::after {
+			content: '+';
+			position: absolute;
+			right: 0;
+			top: 1.875vw;
+			color: $accent-color;
+		}
+
+		&.active {
+			&::after {
+				content: '-';
+			}
+
+			.accordion__body {
+				max-height: max-content;
+				padding-bottom: 1.875vw;
+			}
+		}
+	}
+
+	&__title {
+		padding: 1.875vw 0;
+		font-weight: 700;
+		font-size: 0.9375vw;
+		line-height: 1.2vw;
+		letter-spacing: 0.02em;
+	}
+
+	&__body {
+		max-height: 0;
+		overflow: hidden;
+		font-size: 0.9375vw;
+		line-height: 156%;
+		letter-spacing: 0.02em;
+		color: $gray-1;
+		transition: max-height 0.3s ease-in-out;
+	}
+
+
+	@media (max-width: 768px) {
+		flex-basis: 100%;
+		border-width: 0.1rem;
+
+		&__item {
+
+			&::after {
+				top: 1.2rem;
+				font-size: 1.65rem;
+			}
+
+			&.active {
+				.accordion__body {
+					padding-bottom: 1.2rem;
+				}
+			}
+		}
+
+		&__title {
+			padding: 1.15rem 0;
+			padding-right: 3.2rem;
+			font-size: 1.2rem;
+			line-height: 1.5rem;
+		}
+
+		&__body {
+			font-size: 1rem;
+			line-height: 1.3rem;
+		}
+	}
+}

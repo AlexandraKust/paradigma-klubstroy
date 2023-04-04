@@ -1,0 +1,144 @@
+.report {
+	position: relative;
+	padding-top: 5.1vw;
+	padding-bottom: 9.3vw;
+	overflow: hidden;
+
+	&__logo {
+		position: absolute;
+		top: 10.3125vw;
+		left: -1.875vw;
+		width: 93.2vw;
+		z-index: 1;
+
+		svg {
+			width: 100%;
+		}
+
+		path {
+			fill: #F9FAFD;
+		}
+	}
+
+	&__content {
+		position: relative;
+		z-index: 3;
+	}
+
+	&__title {
+		max-width: 39.3vw;
+		margin-bottom: 3vw;
+	}
+
+	&__list {
+		max-width: 45vw;
+		margin-left: 0.5vw;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		row-gap: 2.8125vw;
+	}
+
+	&__item {
+		flex: 0 1 19.635vw;
+
+		&:nth-child(2) {
+			padding-right: 3.38vw;
+		}
+	}
+
+	&__icon {
+		position: relative;
+		width: 2.6vw;
+		height: 2.6vw;
+		margin-bottom: 1.93vw;
+		border-radius: 0.052vw;
+		background: $accent-color;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 0.625vw;
+			height: 0.56875vw;
+			background: url('../media/svg/check.svg') 0 0 / cover no-repeat;
+		}
+	}
+
+	&__descr {
+		font-size: 1.25vw;
+		line-height: 142%;
+
+		b {
+			font-weight: 700;
+		}
+	}
+
+	&__img {
+		position: absolute;
+		bottom: 0;
+		right: 4.84vw;
+		z-index: 2;
+		width: 30vw;
+		height: auto;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.report {
+		padding-top: 4.4rem;
+		padding-bottom: 44.2rem;
+
+		&__title {
+			max-width: none;
+			margin-bottom: 2.4rem;
+		}
+
+		&__list {
+			max-width: none;
+			margin: 0;
+			column-gap: 2.2rem;
+			row-gap: 2rem;
+		}
+
+		&__item {
+			flex-basis: calc(50% - 1.1rem);
+
+			&:nth-child(2) {
+				padding-right: 0;
+			}
+		}
+
+		&__icon {
+			border-radius: 0.1rem;
+			width: 1.6rem;
+			height: 1.6rem;
+			margin-bottom: 1.2rem;
+
+			&::after {
+				width: 0.4rem;
+				height: 0.3rem;
+			}
+		}
+
+		&__descr {
+			font-size: 0.8rem;
+			line-height: 156%;
+		}
+
+		&__img {
+			right: 50%;
+			bottom: -1.2rem;
+			transform: translateX(50%);
+			width: 24.5rem;
+		}
+
+	}
+}

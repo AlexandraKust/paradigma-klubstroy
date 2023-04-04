@@ -1,0 +1,175 @@
+.about {
+  padding-top: 2.21vw;
+
+  &__title {
+    max-width: 63vw;
+    margin-bottom: 4.17vw;
+  }
+
+  &__row {
+    overflow: hidden;
+  }
+
+  &__img {
+    position: relative;
+    flex: 0 0 53%;
+    background: url('../media/img/man-2.jpg') center 0 / auto 100% no-repeat;
+  }
+
+  &__grid {
+    flex: 0 0 47%;
+  }
+
+  &__list {
+    flex-wrap: wrap;
+    width: 60.46vw;
+    transform: translateX(-33.3%);
+  }
+
+  &__card {
+    flex: 0 0 33.33%;
+    padding: 3.28vw 2.92vw;
+    background-color: #fff;
+    position: relative;
+    outline: 0.052vw solid transparent;
+    transition: outline-color 0.3s ease-in-out;
+
+    display: flex;
+    flex-direction: column;
+
+    &:first-child {
+      background: transparent;
+      outline: none;
+    }
+
+    &:last-child {
+      padding-top: 2.8125vw;
+      padding-bottom: 2.7vw;
+      background-color: $accent-color;
+
+      .about__name {
+        margin-bottom: 0.625vw;
+        line-height: 1.5625vw;
+        color: #fff;
+      }
+
+      .about__descr {
+        font-size: 1vw;
+        line-height: 1.3vw;
+        text-transform: uppercase;
+        color: #fff;
+      }
+
+      &:hover {
+        outline: none;
+      }
+    }
+
+    &:hover {
+      outline-color: $accent-color;
+      outline-offset: -0.052vw;
+      z-index: 3;
+    }
+  }
+
+  &__name {
+    margin-bottom: 0.83vw;
+    font-weight: 500;
+    font-size: 1.25vw;
+    line-height: 142%;
+    text-transform: uppercase;
+    color: $main-color;
+  }
+
+  &__descr {
+    font-size: 0.9375vw;
+    line-height: 156%;
+    color: $gray-1;
+    flex: 1 1 auto;
+  }
+
+  &__phone {
+    display: block;
+    margin-top: 2.92vw;
+    font-weight: 500;
+    font-size: 1.25vw;
+    line-height: 1.5625vw;
+    text-transform: uppercase;
+    color: #fff;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding-top: 2rem;
+
+    &__title {
+      max-width: none;
+      margin-bottom: 2.4rem;
+    }
+
+    &__row {
+      flex-direction: column;
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+      min-height: 22.1rem;
+    }
+
+    &__list {
+      width: 100%;
+      transform: translate(0, -33.34%);
+      margin-bottom: -40.33%;
+    }
+
+    &__card {
+      padding: 1rem;
+      padding-bottom: 0.7rem;
+      flex-basis: 50%;
+      border: 0.1rem solid transparent;
+      min-height: 11rem;
+
+      &:first-child {
+        border: none;
+      }
+
+      &:not(:first-child) {
+        border-color: #F9FAFC;
+      }
+
+      &:last-child {
+        padding: 1rem 0.4rem 1.4rem 1rem;
+
+        .about__name {
+          margin-bottom: 0.4rem;
+          line-height: 140%;
+        }
+
+        .about__descr {
+          font-size: 0.6rem;
+          line-height: 133%;
+        }
+      }
+    }
+
+    &__name {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      line-height: 140%;
+    }
+
+    &__descr {
+      font-size: 0.7rem;
+      line-height: 156%;
+      flex: 1 0 auto;
+    }
+
+    &__phone {
+      margin-top: 0.4rem;
+      font-size: 1rem;
+      line-height: 140%;
+    }
+  }
+}
