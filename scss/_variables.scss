@@ -10,6 +10,19 @@ html {
 	font-size: 10px;
 }
 
+body {
+	min-width: 320px;
+	font-family: 'Cera Pro', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	color: $main-color;
+	overflow-x: hidden;
+
+	&.lock {
+		overflow: hidden;
+	}
+}
+
 @keyframes blick {
 	0% {
 		left: -100%;
@@ -52,6 +65,17 @@ html {
 	animation-duration: 1.5s;
 	animation-fill-mode: both;
 	animation-name: slide-up-in;
+}
+
+.animation {
+	transition: 1s;
+	opacity: 0 !important;
+	transform: translateY(5.2083333333vw) !important;
+}
+
+.animation.visible {
+	opacity: 1 !important;
+	transform: translateY(0) !important;
 }
 
 .container {

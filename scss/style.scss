@@ -1,20 +1,6 @@
 @import "_nullstyle.scss";
 @import "_fonts.scss";
 @import "_variables.scss";
-
-body {
-	min-width: 320px;
-	font-family: 'Cera Pro', sans-serif;
-	font-style: normal;
-	font-weight: 400;
-	color: $main-color;
-	overflow-x: hidden;
-
-	&.lock {
-		overflow: hidden;
-	}
-}
-
 @import "_header.scss";
 @import "_nav.scss";
 @import "_hero.scss";
@@ -28,5 +14,7 @@ body {
 @import "_steps.scss";
 @import "_after.scss";
 @import "_questions.scss";
-
+@import "_callback.scss";
+@import "_contacts.scss";
+@import "_footer.scss";
 @import "_popup.scss";

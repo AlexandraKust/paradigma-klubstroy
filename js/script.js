@@ -286,7 +286,7 @@ $("[data-anchor-btn-js]").on("click", function (event) {
 		let windowHeight = $(window).height();
 
 		if (offset > scroll) {
-			var time = Math.round(offset / windowHeight) * 300;
+			var time = Math.round(offset / windowHeight) * 1000;
 		} else {
 			var time = Math.round((scroll - offset) / windowHeight) * 300;
 		}
@@ -312,7 +312,7 @@ $(document).ready(function () {
 				if (window.innerWidth > 768) {
 					var offset = tag.offset().top - 70;
 				} else {
-					var offset = tag.offset().top - headerHeight - 10;
+					var offset = tag.offset().top - headerHeight;
 				}
 				$('html, body').stop().animate({ scrollTop: offset }, 2000);
 			}
@@ -500,11 +500,13 @@ if (inputCount) {
 	let inputBtnUp = inputCount.parentNode.querySelector('.input-arrow__up');
 	let inputBtnDown = inputCount.parentNode.querySelector('.input-arrow__down');
 	inputBtnUp.addEventListener('click', function () {
+		event.preventDefault()
 		++inputCount.value
 		inputValid(inputCount)
 		$('.quiz__input-count').trigger("oninput");
 	})
 	inputBtnDown.addEventListener('click', function () {
+		event.preventDefault()
 		if (inputCount.value > 0) {
 			--inputCount.value
 			inputValid(inputCount)
@@ -553,6 +555,24 @@ slidersAll.forEach(function (item) {
 	});
 })
 
+// слайдеры в контактах
+let slidersContacts = document.querySelectorAll('.contacts__slider');
+slidersContacts.forEach(function (slider) {
+	let swiper = new Swiper(slider, {
+		loop: false,
+		speed: 600,
+		centeredSlides: false,
+		touchRatio: 1,
+		slidesPerView: 'auto',
+		freeMode: true,
+
+		navigation: {
+			nextEl: slider.querySelector('.slider-btn-next'),
+			prevEl: slider.querySelector('.slider-btn-prev'),
+		},
+	});
+})
+
 
 // кнопка показать еще
 let btnMore = document.querySelectorAll('.btn-more');
@@ -580,3 +600,20 @@ accordionItem.forEach(function (item) {
 		item.classList.toggle('active')
 	})
 })
+
+// анимация подгрузки контента при скролле
+$(window).on('scroll', function () {
+	$('.animation').each(function () {
+		var element = $(this);
+
+		if (!(element.hasClass('visible'))) {
+			var scroll = $(window).scrollTop(),
+				position = element.offset().top,
+				windowHeight = $(window).height();
+
+			if ((scroll + windowHeight) > position) {
+				element.addClass('visible');
+			};
+		};
+	});
+});

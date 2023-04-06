@@ -1,0 +1,298 @@
+.contacts {
+  padding-top: 2.3vw;
+  padding-bottom: 2.3vw;
+
+  &__row {
+    align-items: start;
+    padding-right: 3.9vw;
+  }
+
+  &__shop {
+    flex: 0 0 19vw;
+    margin-right: 8.5vw;
+
+    .contacts__col-title {
+      margin-bottom: 1.98vw;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1.146vw;
+  }
+
+  &__subtitle {
+    margin-bottom: 4.5vw;
+    font-size: 1.25vw;
+    line-height: 142%;
+    color: $gray-1;
+  }
+
+  &__col-title {
+    font-weight: 500;
+    font-size: 1.25vw;
+    line-height: 125%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $main-color;
+  }
+
+  &__gallery {
+    &:not(:last-child) {
+      margin-bottom: 1.25vw;
+    }
+
+    &-name {
+      margin-bottom: 0.625vw;
+      font-size: 1.25vw;
+      line-height: 125%;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  &__slider {
+    position: relative;
+  }
+
+  &__slide {
+    height: 10vw;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .slider-btn {
+    width: 2.08vw;
+    height: 2.08vw;
+  }
+
+  &__btn-next {
+    position: absolute;
+    left: 2.08vw;
+    z-index: 5;
+    bottom: 0;
+  }
+
+  &__btn-prev {
+    position: absolute;
+    left: 0;
+    z-index: 5;
+    bottom: 0;
+  }
+
+  &__map {
+    flex: 1 1 auto;
+    overflow: hidden;
+    align-self: stretch;
+
+    .contacts__col-title {
+      margin-bottom: 0.73vw;
+    }
+  }
+
+  &__frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts {
+    padding: 2.2rem 0;
+
+    &__title {
+      margin-bottom: 1.2rem;
+    }
+
+    &__subtitle {
+      margin-bottom: 3.2rem;
+      font-size: 1.4rem;
+      line-height: 129%;
+    }
+
+    &__row {
+      padding-right: 0;
+      flex-direction: column;
+    }
+
+    &__shop {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 2.7rem;
+      flex-basis: auto;
+
+      .contacts__col-title {
+        margin-bottom: 1.2rem;
+      }
+    }
+
+    &__col-title {
+      font-size: 1.2rem;
+      line-height: 167%;
+    }
+
+    &__gallerys {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__gallery {
+      flex: 0 0 13.2rem;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+
+      &-name {
+        margin-bottom: 0.4rem;
+        font-size: 1rem;
+        line-height: 160%;
+      }
+    }
+
+    &__slide {
+      height: 10rem;
+    }
+
+    .slider-btn {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    &__btn-next {
+      left: 2rem;
+    }
+
+    &__map .contacts__col-title {
+      margin-bottom: 0.8rem;
+    }
+
+    &__frame {
+      height: 12rem;
+    }
+  }
+}
+
+.address {
+  margin-right: 5.5vw;
+  flex-direction: column;
+  gap: 4vw;
+  flex: 0 0 11.4vw;
+  font-style: normal;
+  color: $main-color;
+  cursor: default;
+
+  &__icon {
+    width: 1vw;
+    margin-bottom: 0.42vw;
+
+    path {
+      fill: $accent-color;
+    }
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 0.73vw;
+    line-height: 150%;
+  }
+
+  a.contacts__descr {
+    cursor: pointer;
+  }
+
+  &__descr {
+    font-size: 0.73vw;
+    line-height: 150%;
+    color: var(--main-black);
+  }
+
+  &__social {
+    gap: 0.3125vw;
+    padding-top: 0.2vw;
+
+    .social__item {
+      flex-basis: 2.1875vw;
+      height: 2.1875vw;
+
+      &-whatsapp {
+        background-color: #39CB59;
+      }
+
+      &-telegram {
+        background-color: #3B82E0;
+      }
+
+      path {
+        fill: #fff;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .address {
+    width: 100%;
+    flex-basis: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 2.5rem;
+    margin-right: 0;
+    margin-bottom: 3.1rem;
+
+    &__item {
+
+      &:nth-child(1),
+      &:nth-child(4) {
+        flex-basis: 15.2rem;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        flex-basis: 10.2rem;
+      }
+
+      &:nth-child(4) {
+        order: 3;
+      }
+
+      &:nth-child(3) {
+        order: 4;
+      }
+    }
+
+    &__icon {
+      width: auto;
+      height: 1.6rem;
+      margin-bottom: 0.4rem;
+
+      svg {
+        height: 100%;
+      }
+    }
+
+    &__name,
+    &__descr {
+      font-size: 1.2rem;
+      line-height: 175%;
+    }
+
+    &__social {
+      gap: 0.4rem;
+      padding-top: 0.4rem;
+
+      .social__item {
+        flex-basis: 2rem;
+        height: 2rem;
+
+        svg {
+          width: 0.8rem;
+          height: auto;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,191 @@
+.callback {
+	padding-top: 3vw;
+	padding-bottom: 2.3vw;
+
+	.container {
+		position: relative;
+		padding: 3.5vw 7.5vw 4.32vw;
+		background: url("../media/img/engineer.png") 113% -1vw/auto calc(118% + 1vw) no-repeat,
+			url('../media/img/consultation-bg.jpg') center 0 / 100% 100% no-repeat;
+	}
+
+	&__content {
+		max-width: 42.7vw;
+		color: #fff;
+	}
+
+	&__title {
+		color: #fff;
+		margin-bottom: 1.9vw;
+	}
+
+	&__subtitle {
+		margin-bottom: 2vw;
+		font-weight: 500;
+		font-size: 1.5625vw;
+		line-height: 1.98vw;
+	}
+
+	&__list {
+		margin-bottom: 2.1vw;
+	}
+
+	&__item {
+		position: relative;
+		padding-left: 1.35vw;
+		font-size: 1vw;
+		line-height: 1.3vw;
+
+		b {
+			font-weight: 700;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 1.05vw;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 0.52vw;
+			height: 0.52vw;
+			background-color: $accent-color;
+		}
+	}
+
+	&__form-row {
+		align-items: end;
+		justify-content: space-between;
+		gap: 0.989vw;
+		margin-bottom: 1.3vw;
+	}
+
+	&__label {
+		color: #fff;
+		flex: 0 0 20.83vw;
+	}
+
+	&__input {
+		width: 100%;
+		border: none;
+
+		&::placeholder {
+			color: $gray-1;
+		}
+	}
+
+	&__btn {
+		height: 4.17vw;
+		flex: 1 1 auto;
+	}
+
+	&__agree {
+		.agree__text {
+			color: #fff;
+		}
+	}
+
+	&__marker {
+		position: absolute;
+		right: 6vw;
+		bottom: 6.2vw;
+		max-width: 7.92vw;
+		font-size: 0.833vw;
+		line-height: 1vw;
+		color: $gray-5;
+
+		b {
+			display: block;
+			margin-bottom: 0.9vw;
+			font-size: 1vw;
+			line-height: 1.3vw;
+			font-weight: 700;
+			color: #fff;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.callback {
+		padding: 2.2rem 0;
+
+		.container {
+			margin: 0 2.2rem;
+			padding: 1.6rem 1.5rem 35.9rem;
+			background: url("../media/img/engineer.png") 30% 111%/124% auto no-repeat,
+				url('../media/img/consultation-bg.jpg') center 0 / 100% 100% no-repeat;
+		}
+
+		&__content {
+			max-width: none;
+		}
+
+		&__title {
+			margin-bottom: 1.2rem;
+		}
+
+		&__subtitle {
+			margin-bottom: 0.8rem;
+			font-size: 1.4rem;
+			font-weight: 400;
+			line-height: 129%;
+		}
+
+		&__list {
+			margin-bottom: 3.3rem;
+		}
+
+		&__item {
+			padding-left: 1.2rem;
+			font-size: 1rem;
+			line-height: 1.3rem;
+
+			&:not(:last-child) {
+				margin-bottom: 0.8rem;
+			}
+
+			&::before {
+				width: 0.4rem;
+				height: 0.4rem;
+			}
+		}
+
+		&__form-row {
+			flex-direction: column;
+			gap: 0.8rem;
+			align-items: start;
+			margin-bottom: 1rem;
+		}
+
+		&__label {
+			width: 100%;
+		}
+
+		&__btn {
+			width: 100%;
+			height: auto;
+		}
+
+		&__agree {
+			align-items: start;
+		}
+
+		&__marker {
+			bottom: 1.6rem;
+			right: 1.9rem;
+			max-width: 9.7rem;
+			font-size: 1rem;
+			line-height: 125%;
+
+			b {
+				margin-bottom: 0.5rem;
+				font-size: 1.2rem;
+				line-height: 1.5rem;
+			}
+
+		}
+	}
+}

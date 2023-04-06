@@ -10,10 +10,10 @@
   <link rel="icon" type="image/png" href="media/favicon.png">
   <!-- <link rel="stylesheet" href="libs/normalize.css"> -->
   <link rel="stylesheet" href="libs/custom-select.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
     integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -96,28 +96,28 @@
       </button>
       <ul class="nav__list flex">
         <li class="nav__item">
-          <a href="#" class="nav__link">услуги</a>
+          <a href="#services" class="nav__link">услуги</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">преимущества</a>
+          <a href="#benefits" class="nav__link">преимущества</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">портфолио</a>
+          <a href="#portfolio" class="nav__link">портфолио</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">о компании</a>
+          <a href="#about" class="nav__link">о компании</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">монтаж</a>
+          <a href="#steps" class="nav__link">монтаж</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">гарантии</a>
+          <a href="#warranty" class="nav__link">гарантии</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">вопрос-ответ</a>
+          <a href="#questions" class="nav__link">вопрос-ответ</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">контакты</a>
+          <a href="#contacts" class="nav__link">контакты</a>
         </li>
       </ul>
       <div class="nav__row flex">
@@ -217,7 +217,7 @@
             </ul>
           </div>
         </div>
-        <div class="quiz__inner">
+        <div class="quiz__inner animation">
           <div class="quiz__loader">
             <div class="loader-text">Получение данных</div>
           </div>
@@ -373,19 +373,19 @@
                     Какое количество окон?
                   </h3>
                   <div class="quiz-options flex quiz-options--input">
-                    <label class="quiz__input-wrap">
-                      <div class="input-arrow input-arrow__up" aria-label="кнопка увеличить счетчик">
+                    <div class="quiz__input-wrap">
+                      <button class="input-arrow input-arrow__up" aria-label="кнопка увеличить счетчик">
                         <svg viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M2 4L5 1L8 4" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
                         </svg>
-                      </div>
+                      </button>
                       <input type="number" min="0" class="quiz__input-count input" name="quiz2_2" placeholder="0">
-                      <div class="input-arrow input-arrow__down" aria-label="кнопка уменьшить счетчик">
+                      <button class="input-arrow input-arrow__down" aria-label="кнопка уменьшить счетчик">
                         <svg viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M8 2L5 5L2 2" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
                         </svg>
-                      </div>
-                    </label>
+                      </button>
+                    </div>
                   </div>
                 </div>
                 <div class="quiz-item" style="display:none;">
@@ -679,7 +679,7 @@
                       Инженер уже приступил к расчёту стоимости
                     </p>
                     <div class="quiz-item__form quiz-catalog flex">
-                      <label class="quiz-catalog__label label">
+                      <div class="quiz-catalog__label label">
                         Куда Вам отправить?
                         <div class="select-social">
                           <div class="quiz-catalog__select select">
@@ -707,7 +707,7 @@
                             </div>
                           </div>
                         </div>
-                      </label>
+                      </div>
                       <label class="quiz-catalog__label label">
                         Введите номер
                         <input class="quiz-catalog__input input" type="tel" placeholder="+ 7 (___) ___-__-__"
@@ -782,7 +782,7 @@
           <h2 class="services__title section-title">Предоставим <span>полный спектр услуг</span> в области отопления и
             водоснабжения
           </h2>
-          <p class="services__sibtitle">
+          <p class="services__sibtitle animation">
             Вам не нужно тратить своё время и нервы на общение с 4–6 разными подрядчиками по каждому этапу
           </p>
           <div class="services__hint hint mobile" style="display: none;">
@@ -791,7 +791,7 @@
           </div>
         </div>
         <ul class="services__list flex">
-          <li class="services__item">
+          <li class="services__item animation">
             <picture>
               <source srcset="media/img/services-1-mob.jpg" media="(max-width: 768px)">
               <img src="media/img/services-1.jpg" alt="">
@@ -817,7 +817,7 @@
               </div>
             </div>
           </li>
-          <li class="services__item">
+          <li class="services__item animation">
             <picture>
               <source srcset="media/img/services-2-mob.jpg" media="(max-width: 768px)">
               <img src="media/img/services-2.jpg" alt="">
@@ -845,7 +845,7 @@
               </div>
             </div>
           </li>
-          <li class="services__item">
+          <li class="services__item animation">
             <picture>
               <source srcset="media/img/services-3-mob.jpg" media="(max-width: 768px)">
               <img src="media/img/services-3.jpg" alt="">
@@ -874,7 +874,7 @@
               </div>
             </div>
           </li>
-          <li class="services__item">
+          <li class="services__item animation">
             <picture>
               <source srcset="media/img/services-4-mob.jpg" media="(max-width: 768px)">
               <img src="media/img/services-4.jpg" alt="">
@@ -900,7 +900,7 @@
               </div>
             </div>
           </li>
-          <li class="services__item">
+          <li class="services__item animation">
             <picture>
               <source srcset="media/img/services-5-mob.jpg" media="(max-width: 768px)">
               <img src="media/img/services-5.jpg" alt="">
@@ -939,7 +939,7 @@
             за счет энергоэффективных решений от&nbsp;проверенных брендов и&nbsp;профессионального монтажа
           </p>
         </div>
-        <ul class="services__companys flex">
+        <ul class="services__companys flex animation">
           <li class="services__companys-item">
             <img src="media/img/bosch.png" alt="bosch">
           </li>
@@ -961,7 +961,7 @@
           <p class="hint__text">нажмите на стрелку, чтобы узнать больше</p>
         </div>
         <ul class="services__result result-service flex">
-          <li class="result-service__item flex">
+          <li class="result-service__item flex animation">
             <button class="services__btn arrow-btn" aria-label="показать описание">
               <svg viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8.43239 1.01L0.82666 8.61572L-4.90769e-05 7.78901L7.60568 0.183286L8.43239 1.01Z" />
@@ -981,7 +981,7 @@
               </div>
             </div>
           </li>
-          <li class="result-service__item flex">
+          <li class="result-service__item flex animation">
             <button class="services__btn arrow-btn" aria-label="показать описание">
               <svg viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8.43239 1.01L0.82666 8.61572L-4.90769e-05 7.78901L7.60568 0.183286L8.43239 1.01Z" />
@@ -1000,7 +1000,7 @@
               </div>
             </div>
           </li>
-          <li class="result-service__item flex">
+          <li class="result-service__item flex animation">
             <button class="services__btn arrow-btn" aria-label="показать описание">
               <svg viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8.43239 1.01L0.82666 8.61572L-4.90769e-05 7.78901L7.60568 0.183286L8.43239 1.01Z" />
@@ -1020,7 +1020,7 @@
               </div>
             </div>
           </li>
-          <li class="result-service__item flex">
+          <li class="result-service__item flex animation">
             <button class="services__btn arrow-btn" aria-label="показать описание">
               <svg viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8.43239 1.01L0.82666 8.61572L-4.90769e-05 7.78901L7.60568 0.183286L8.43239 1.01Z" />
@@ -1046,7 +1046,7 @@
     <!-- преимущества -->
     <section class="benefits">
       <div class="container">
-        <div class="benefits__callback callback-benefits flex">
+        <div class="benefits__callback callback-benefits flex animation">
           <div class="callback-benefits__img"><img src="media/img/engineer.png" alt="инженер"></div>
           <div class="callback-benefits__text">
             <h2 class="callback-benefits__title section-title">Не знаете что именно нужно?</h2>
@@ -1083,7 +1083,7 @@
           </div>
         </div>
 
-        <div class="benefits__row flex">
+        <div class="benefits__row flex" id="benefits">
           <div class="benefits__text">
             <h2 class="benefits__title section-title">
               Знаем все <span>подводные камни и&nbsp;требования безопасности</span>
@@ -1096,7 +1096,7 @@
               и&nbsp;международные стандарты
             </p>
           </div>
-          <ol class="benefits__list flex">
+          <ol class="benefits__list flex animation">
             <li class="benefits__item">
               <div class="benefits__item-body">
                 <p class="benefits__number">01</p>
@@ -1146,38 +1146,38 @@
     </section>
 
     <!-- портфолио -->
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
       <div class="container">
         <h2 class="portfolio__title section-title">
           За 10 лет установили более <span>600<br> инженерных систем</span>, вот некоторые из них
         </h2>
-        <ul class="portfolio__list flex">
+        <ul class="portfolio__list flex animation">
           <li class="portfolio__item">
             <div class="portfolio__sliders">
               <div class="portfolio__swiper swiper">
                 <div class="portfolio__wrapper swiper-wrapper">
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-1.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-1.jpg" data-fancybox="portfolio-img-1"></a>
                     <img src="media/img/portfolio-1.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-2.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-2.jpg" data-fancybox="portfolio-img-1"></a>
                     <img src="media/img/portfolio-2.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-3.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-3.jpg" data-fancybox="portfolio-img-1"></a>
                     <img src="media/img/portfolio-3.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img-1"></a>
                     <img src="media/img/portfolio-4.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img-1"></a>
                     <img src="media/img/portfolio-4.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img-1"></a>
                     <img src="media/img/portfolio-4.jpg" alt="">
                   </div>
                 </div>
@@ -1196,7 +1196,7 @@
                   </svg>
                 </button>
               </div>
-              <div class="portfolio__swiper-thumbs swiper" thumbsSlider="">
+              <div class="portfolio__swiper-thumbs swiper">
                 <div class="portfolio__wrapper swiper-wrapper">
                   <div class="portfolio__slide swiper-slide">
                     <img src="media/img/portfolio-1.jpg" alt="">
@@ -1228,7 +1228,7 @@
               Установлен котел BAXI 40 квт, произведен монтаж систем отопления, водоснабжения и канализации, укладка
               теплых полов
             </p>
-            <a href="#" class="portfolio__btn main-btn main-btn--white">
+            <a href="#quiz" class="portfolio__btn main-btn main-btn--white" data-anchor-btn-js>
               <span class="btn-blick"></span>
               <span>Рассчитать стоимость</span>
             </a>
@@ -1238,27 +1238,27 @@
               <div class="portfolio__swiper swiper">
                 <div class="portfolio__wrapper swiper-wrapper">
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-1.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-1.jpg" data-fancybox="portfolio-img-2"></a>
                     <img src="media/img/portfolio-1.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-2.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-2.jpg" data-fancybox="portfolio-img-2"></a>
                     <img src="media/img/portfolio-2.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-3.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-3.jpg" data-fancybox="portfolio-img-2"></a>
                     <img src="media/img/portfolio-3.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img-2"></a>
                     <img src="media/img/portfolio-4.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img-2"></a>
                     <img src="media/img/portfolio-4.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img-2"></a>
                     <img src="media/img/portfolio-4.jpg" alt="">
                   </div>
                 </div>
@@ -1277,7 +1277,7 @@
                   </svg>
                 </button>
               </div>
-              <div class="portfolio__swiper-thumbs swiper" thumbsSlider="">
+              <div class="portfolio__swiper-thumbs swiper">
                 <div class="portfolio__wrapper swiper-wrapper">
                   <div class="portfolio__slide swiper-slide">
                     <img src="media/img/portfolio-1.jpg" alt="">
@@ -1309,7 +1309,7 @@
               Установлен котел BAXI 40 квт, произведен монтаж систем отопления, водоснабжения и канализации, укладка
               теплых полов
             </p>
-            <a href="#" class="portfolio__btn main-btn main-btn--white">
+            <a href="#quiz" class="portfolio__btn main-btn main-btn--white" data-anchor-btn-js>
               <span class="btn-blick"></span>
               <span>Рассчитать стоимость</span>
             </a>
@@ -1319,27 +1319,27 @@
               <div class="portfolio__swiper swiper">
                 <div class="portfolio__wrapper swiper-wrapper">
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-1.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-1.jpg" data-fancybox="portfolio-img-3"></a>
                     <img src="media/img/portfolio-1.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-2.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-2.jpg" data-fancybox="portfolio-img-3"></a>
                     <img src="media/img/portfolio-2.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-3.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-3.jpg" data-fancybox="portfolio-img-3"></a>
                     <img src="media/img/portfolio-3.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img-3"></a>
                     <img src="media/img/portfolio-4.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img-3"></a>
                     <img src="media/img/portfolio-4.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img-3"></a>
                     <img src="media/img/portfolio-4.jpg" alt="">
                   </div>
                 </div>
@@ -1358,7 +1358,7 @@
                   </svg>
                 </button>
               </div>
-              <div class="portfolio__swiper-thumbs swiper" thumbsSlider="">
+              <div class="portfolio__swiper-thumbs swiper">
                 <div class="portfolio__wrapper swiper-wrapper">
                   <div class="portfolio__slide swiper-slide">
                     <img src="media/img/portfolio-1.jpg" alt="">
@@ -1390,7 +1390,7 @@
               Установлен котел BAXI 40 квт, произведен монтаж систем отопления, водоснабжения и канализации, укладка
               теплых полов
             </p>
-            <a href="#" class="portfolio__btn main-btn main-btn--white">
+            <a href="#quiz" class="portfolio__btn main-btn main-btn--white" data-anchor-btn-js>
               <span class="btn-blick"></span>
               <span>Рассчитать стоимость</span>
             </a>
@@ -1400,27 +1400,27 @@
               <div class="portfolio__swiper swiper">
                 <div class="portfolio__wrapper swiper-wrapper">
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-1.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-1.jpg" data-fancybox="portfolio-img-4"></a>
                     <img src="media/img/portfolio-1.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-2.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-2.jpg" data-fancybox="portfolio-img-4"></a>
                     <img src="media/img/portfolio-2.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-3.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-3.jpg" data-fancybox="portfolio-img-4"></a>
                     <img src="media/img/portfolio-3.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img-4"></a>
                     <img src="media/img/portfolio-4.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img-4"></a>
                     <img src="media/img/portfolio-4.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img-4"></a>
                     <img src="media/img/portfolio-4.jpg" alt="">
                   </div>
                 </div>
@@ -1439,7 +1439,7 @@
                   </svg>
                 </button>
               </div>
-              <div class="portfolio__swiper-thumbs swiper" thumbsSlider="">
+              <div class="portfolio__swiper-thumbs swiper">
                 <div class="portfolio__wrapper swiper-wrapper">
                   <div class="portfolio__slide swiper-slide">
                     <img src="media/img/portfolio-1.jpg" alt="">
@@ -1471,7 +1471,7 @@
               Установлен котел BAXI 40 квт, произведен монтаж систем отопления, водоснабжения и канализации, укладка
               теплых полов
             </p>
-            <a href="#" class="portfolio__btn main-btn main-btn--white">
+            <a href="#quiz" class="portfolio__btn main-btn main-btn--white" data-anchor-btn-js>
               <span class="btn-blick"></span>
               <span>Рассчитать стоимость</span>
             </a>
@@ -1481,27 +1481,27 @@
               <div class="portfolio__swiper swiper">
                 <div class="portfolio__wrapper swiper-wrapper">
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-1.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-1.jpg" data-fancybox="portfolio-img-5"></a>
                     <img src="media/img/portfolio-1.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-2.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-2.jpg" data-fancybox="portfolio-img-5"></a>
                     <img src="media/img/portfolio-2.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-3.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-3.jpg" data-fancybox="portfolio-img-5"></a>
                     <img src="media/img/portfolio-3.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img-5"></a>
                     <img src="media/img/portfolio-4.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img-5"></a>
                     <img src="media/img/portfolio-4.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img-5"></a>
                     <img src="media/img/portfolio-4.jpg" alt="">
                   </div>
                 </div>
@@ -1520,7 +1520,7 @@
                   </svg>
                 </button>
               </div>
-              <div class="portfolio__swiper-thumbs swiper" thumbsSlider="">
+              <div class="portfolio__swiper-thumbs swiper">
                 <div class="portfolio__wrapper swiper-wrapper">
                   <div class="portfolio__slide swiper-slide">
                     <img src="media/img/portfolio-1.jpg" alt="">
@@ -1552,7 +1552,7 @@
               Установлен котел BAXI 40 квт, произведен монтаж систем отопления, водоснабжения и канализации, укладка
               теплых полов
             </p>
-            <a href="#" class="portfolio__btn main-btn main-btn--white">
+            <a href="#quiz" class="portfolio__btn main-btn main-btn--white" data-anchor-btn-js>
               <span class="btn-blick"></span>
               <span>Рассчитать стоимость</span>
             </a>
@@ -1562,27 +1562,27 @@
               <div class="portfolio__swiper swiper">
                 <div class="portfolio__wrapper swiper-wrapper">
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-1.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-1.jpg" data-fancybox="portfolio-img-6"></a>
                     <img src="media/img/portfolio-1.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-2.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-2.jpg" data-fancybox="portfolio-img-6"></a>
                     <img src="media/img/portfolio-2.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-3.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-3.jpg" data-fancybox="portfolio-img-6"></a>
                     <img src="media/img/portfolio-3.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img-6"></a>
                     <img src="media/img/portfolio-4.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img-6"></a>
                     <img src="media/img/portfolio-4.jpg" alt="">
                   </div>
                   <div class="portfolio__slide swiper-slide">
-                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img"></a>
+                    <a href="media/img/portfolio-4.jpg" data-fancybox="portfolio-img-6"></a>
                     <img src="media/img/portfolio-4.jpg" alt="">
                   </div>
                 </div>
@@ -1601,7 +1601,7 @@
                   </svg>
                 </button>
               </div>
-              <div class="portfolio__swiper-thumbs swiper" thumbsSlider="">
+              <div class="portfolio__swiper-thumbs swiper">
                 <div class="portfolio__wrapper swiper-wrapper">
                   <div class="portfolio__slide swiper-slide">
                     <img src="media/img/portfolio-1.jpg" alt="">
@@ -1633,7 +1633,7 @@
               Установлен котел BAXI 40 квт, произведен монтаж систем отопления, водоснабжения и канализации, укладка
               теплых полов
             </p>
-            <a href="#" class="portfolio__btn main-btn main-btn--white">
+            <a href="#quiz" class="portfolio__btn main-btn main-btn--white" data-anchor-btn-js>
               <span class="btn-blick"></span>
               <span>Рассчитать стоимость</span>
             </a>
@@ -1645,13 +1645,13 @@
     </section>
 
     <!-- о компании -->
-    <section class="about">
+    <section class="about" id="about">
       <div class="container">
         <h2 class="about__title section-title">
           <span>19 лицензированных</span> бригад произведут монтаж с вашим минимальным участием
         </h2>
 
-        <div class="about__row flex">
+        <div class="about__row flex animation">
           <div class="about__img">
           </div>
           <div class="about__grid">
@@ -1677,12 +1677,12 @@
                   день
                 </p>
               </li>
-              <div class="about__card">
+              <li class="about__card">
                 <p class="about__name">собственный
                   автопарк</p>
                 <p class="about__descr">
                   Всегда своевременная доставка материалов и&nbsp;выезд бригады на&nbsp;объект </p>
-              </div>
+              </li>
               <li class="about__card">
                 <p class="about__name">Послегарантийное обслуживание</p>
                 <p class="about__descr">
@@ -1705,13 +1705,13 @@
       </div>
     </section>
 
-    <!-- преимущества -->
-    <section class="warranty">
+    <!-- гарантии -->
+    <section class="warranty" id="warranty">
       <div class="container">
         <h2 class="warranty__title section-title">
           Обеспечим <span>100% рабочую</span> систему
         </h2>
-        <ul class="warranty__list flex">
+        <ul class="warranty__list flex animation">
           <li class="warranty__elem">
             <div class="warranty__icon"></div>
             <p class="warranty__name">Отсутствие
@@ -1775,7 +1775,7 @@
               </span>
             </a>
           </div>
-          <ul class="warranty__grid flex">
+          <ul class="warranty__grid flex animation">
             <li class="warranty__item">
               <div class="warranty__item-body">
                 <p class="warranty__name">гарантия <br>качества</p>
@@ -1817,13 +1817,13 @@
     </section>
 
     <!-- отчетность -->
-    <section class="report">
+    <section class="report" id="report">
       <div class="container">
         <div class="report__content">
           <h2 class="report__title section-title">
             Предоставим <span>полную отчетность</span> о ходе работ через группу в удобном вам мессенджере
           </h2>
-          <ul class="report__list flex">
+          <ul class="report__list flex animation">
             <li class="report__item">
               <div class="report__icon"></div>
               <p class="report__descr">
@@ -1879,7 +1879,7 @@
     </section>
 
     <!-- стадии -->
-    <section class="steps">
+    <section class="steps" id="steps">
       <div class="container">
         <div class="steps__row flex">
           <h2 class="steps__title section-title">
@@ -1887,7 +1887,7 @@
             и&nbsp;держим в курсе <span>каждой стадии</span> проектирования
             и&nbsp;монтажа системы
           </h2>
-          <ul class="steps__list flex">
+          <ul class="steps__list flex animation">
             <li class="steps__item">
               <div class="steps__item-body">
                 <p class="steps__name">
@@ -1949,7 +1949,7 @@
     </section>
 
     <!-- не бросаем после -->
-    <section class="after">
+    <section class="after" id="after">
       <div class="container">
         <div class="after__row flex">
           <div class="after__text flex">
@@ -1959,7 +1959,7 @@
             </h2>
             <p class="after__descr">Обеспечиваем сервисное обслуживание во время и после гарантийного срока</p>
           </div>
-          <div class="after__images">
+          <div class="after__images animation">
             <div class="after__images-big">
               <img src="media/img/withu-1.jpg" alt="">
             </div>
@@ -1975,7 +1975,7 @@
     </section>
 
     <!-- вопросы -->
-    <section class="questions">
+    <section class="questions" id="questions">
       <div class="container">
         <div class="questions__row flex">
           <div class="questions__caption">
@@ -1991,7 +1991,7 @@
               написать в whatsapp
             </a>
           </div>
-          <div class="questions__accordions flex">
+          <div class="questions__accordions flex animation">
             <ul class="questions__accordion accordion">
               <li class="accordion__item">
                 <p class="accordion__title">Есть ли гарантия на оборудование?</p>
@@ -2056,7 +2056,237 @@
         </div>
       </div>
     </section>
+
+    <!-- консультация -->
+    <section class="callback animation" id="consultation">
+      <div class="container">
+        <div class="callback__content">
+          <h2 class="callback__title section-title">на Бесплатной консультации по&nbsp;подбору оборудования</h2>
+          <p class="callback__subtitle">расскажем все об инженерных системах</p>
+          <ul class="callback__list">
+            <li class="callback__item"><b>Выслушаем</b> ваши пожелания</li>
+            <li class="callback__item"><b>Подберем</b> оптимальный материал и&nbsp;оборудование</li>
+            <li class="callback__item"><b>Подскажем</b> какое оборудование лучше подойдет в&nbsp;вашей ситуации</li>
+            <li class="callback__item"><b>Сориентируем</b> по стоимости и&nbsp;срокам монтажа</li>
+            <li class="callback__item"><b>Ответим</b> на все ваши вопросы</li>
+          </ul>
+          <form action="mailer/send.php" method="POST" class="callback__form" data-form-validate-js>
+            <input type="hidden" name="formname" value="callback">
+            <div class="callback__form-row flex">
+              <label class="callback__label label">
+                Введите номер
+                <input class="callback__input input" type="tel" name="phone" placeholder="+7 (___) ___-__-__">
+              </label>
+              <button class="callback__btn main-btn main-btn--blue">
+                <span class="btn-blick"></span>
+                <span>перезвоните мне</span>
+              </button>
+            </div>
+            <div class="callback__agree agree flex">
+              <div class="agree__checkbox"></div>
+              <div class="agree__text">
+                Нажимая кнопку вы соглашаетесь с условиями <span class="agree__link conf">Политики
+                  конфиденциальности</span>
+              </div>
+            </div>
+          </form>
+          <div class="callback__marker">
+            <b>Артем Лошиневич</b>
+            Старший инженер
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- контакты -->
+    <section class="contacts animation" id="contacts">
+      <div class="container">
+        <h2 class="contacts__title section-title">
+          Или приезжайте к&nbsp;нам в офис
+        </h2>
+        <p class="contacts__subtitle">
+          Посмотрите образцы материалов и оборудования, а мы поможем определиться с выбором и посчитаем предварительную
+          смету
+        </p>
+        <div class="contacts__row flex animation">
+          <address class="contacts__address address flex">
+            <div class="address__item">
+              <div class="address__icon">
+                <svg viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M19.9579 11.2388C19.6212 13.5056 18.6111 15.4365 17.0117 17.0317C16.0857 17.8713 15.244 18.7948 14.318 19.6343C12.9712 21.0616 11.6243 22.5728 10.2775 24C7.41545 21.0616 4.6376 18.5429 2.02809 15.7724C0.512897 14.0933 -0.0763465 11.9104 0.00783105 9.64361C0.0920086 4.77419 3.88 0.576418 8.59394 0.0726849C13.8971 -0.515004 18.4427 2.50739 19.7896 7.46077C20.1263 8.46823 19.9579 11.0709 19.9579 11.2388ZM10.025 13.2537C11.7927 13.2537 13.3079 11.8265 13.3079 10.0634C13.3079 8.30032 11.7927 6.78912 10.1091 6.78912C8.42559 6.78912 6.82621 8.30032 6.82621 9.97943C6.82621 11.7425 8.25723 13.2537 10.025 13.2537Z" />
+                </svg>
+              </div>
+              <p class="address__name">Адрес:</p>
+              <p class="address__descr">
+                Москва, Варшавское шоссе д.12
+              </p>
+            </div>
+            <div class="address__item">
+              <div class="address__icon">
+                <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M13.4487 9.99501C12.8888 9.41417 12.1609 9.41417 11.5776 9.99501C11.139 10.4318 10.705 10.8639 10.2664 11.3007C10.145 11.4215 10.0471 11.4448 9.9024 11.3751C9.63643 11.2078 9.31912 11.087 9.05315 10.915C7.7886 10.1158 6.72003 9.0982 5.77278 7.94117C5.31083 7.36034 4.9002 6.75627 4.60622 6.05462C4.55956 5.91058 4.55956 5.83623 4.68088 5.71542C5.14284 5.30186 5.55347 4.86972 5.9921 4.43293C6.59871 3.82886 6.59871 3.12721 5.9921 2.52315C5.62813 2.16071 5.2875 1.8215 4.94686 1.48229C4.58289 1.11985 4.24226 0.757409 3.87829 0.418201C3.31834 -0.1394 2.59041 -0.1394 2.00713 0.418201C1.56851 0.854989 1.13455 1.28713 0.69592 1.72392C0.280625 2.13747 0.0659787 2.62073 0.0146501 3.17368C-0.0600097 4.07049 0.159303 4.93942 0.476607 5.78512C1.13455 7.55085 2.12845 9.07496 3.31834 10.5015C4.94686 12.4392 6.88801 13.9633 9.15114 15.0506C10.173 15.5338 11.2183 15.9195 12.3335 15.9939C13.1361 16.0403 13.8174 15.8266 14.3727 15.2179C14.7366 14.7811 15.1752 14.4186 15.5625 14.0097C16.1458 13.4057 16.1458 12.6808 15.5625 12.1C14.8579 11.3983 14.1533 10.6967 13.4487 9.99501Z" />
+                </svg>
+              </div>
+              <p class="address__name">Телефон:</p>
+              <a href="tel:+79256166166" class="address__descr">+7 (925) 6-166-166</a>
+              <div class="address__social social flex">
+                <a href="#" class="social__item social__item-whatsapp" aria-label="WhatsApp">
+                  <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.17844 0.376953C3.42917 0.376953 0.387085 3.41622 0.387085 7.16203C0.387085 8.66193 0.873029 10.0434 1.69479 11.1683L0.82957 13.7261L3.52794 12.8853C4.58279 13.5563 5.83519 13.9471 7.17844 13.9471C10.9277 13.9471 13.9698 10.9078 13.9698 7.16203C13.9698 3.41622 10.9277 0.376953 7.17844 0.376953ZM10.2877 10.8013C9.05506 11.2946 7.58537 10.817 5.97741 9.59739C4.36945 8.37774 3.31065 6.66075 3.23953 5.38583C3.16842 4.11092 4.20747 3.46754 4.77243 3.47148C5.33739 3.47543 5.95766 5.27926 5.96556 5.55556C5.97346 5.8358 5.27418 6.33314 5.24652 6.56996C5.21887 6.80679 6.19866 7.97513 6.61349 8.2909C7.02436 8.60272 7.87378 9.20268 8.31231 9.14742C8.7469 9.08822 9.0353 8.21591 9.31186 8.16065C9.58841 8.10539 11.0976 8.85534 11.2477 9.04875C11.3979 9.2461 11.3821 10.3671 10.2877 10.8013Z" />
+                  </svg>
+                </a>
+                <a href="#" class="social__item social__item-telegram" aria-label="telegram">
+                  <svg viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.20148 7.81348L4.98922 10.7108C5.29137 10.7108 5.42372 10.5843 5.58104 10.4311L6.99941 9.11012L9.93852 11.2071C10.4779 11.499 10.8575 11.3458 11.0023 10.723L12.9326 1.91417C13.1049 1.14057 12.6454 0.836486 12.121 1.02867L0.779073 5.25914C0.00496463 5.55107 0.0174502 5.97193 0.646725 6.16168L3.54589 7.03988L10.2806 2.93348C10.5978 2.72913 10.8849 2.84104 10.6477 3.04782L5.20148 7.81348Z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="address__item">
+              <div class="address__icon">
+                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M19.8234 3.97266L13.7578 9.99918L19.8234 16.0257C19.933 15.7965 19.9996 15.5432 19.9996 15.2726V4.72574C19.9996 4.45516 19.933 4.20184 19.8234 3.97266Z" />
+                  <path
+                    d="M18.2414 2.96875H1.75699C1.48641 2.96875 1.23309 3.03527 1.00391 3.14492L8.75637 10.8583C9.44184 11.5438 10.5565 11.5438 11.242 10.8583L18.9945 3.14492C18.7653 3.03527 18.512 2.96875 18.2414 2.96875Z" />
+                  <path
+                    d="M0.176172 3.97266C0.0665234 4.20184 0 4.45516 0 4.72574V15.2726C0 15.5432 0.0665234 15.7966 0.176172 16.0257L6.24176 9.99918L0.176172 3.97266Z" />
+                  <path
+                    d="M12.9289 10.8281L12.0705 11.6864C10.9284 12.8286 9.06992 12.8286 7.92777 11.6864L7.06949 10.8281L1.00391 16.8546C1.23309 16.9643 1.48641 17.0308 1.75699 17.0308H18.2414C18.512 17.0308 18.7653 16.9643 18.9945 16.8546L12.9289 10.8281Z" />
+                </svg>
+              </div>
+              <p class="address__name">E-mail:</p>
+              <a href="mailto:info@gmail.com" class="address__descr">info@gmail.com</a>
+            </div>
+            <div class="address__item">
+              <div class="address__icon">
+                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10 0C4.48578 0 0 4.48578 0 10C0 15.5142 4.48578 20 10 20C15.5142 20 20 15.5142 20 10C20 4.48578 15.5142 0 10 0ZM14.7559 15.1724C14.5934 15.3349 14.38 15.4167 14.1667 15.4167C13.9534 15.4167 13.7399 15.3349 13.5776 15.1724L9.41086 11.0059C9.25415 10.8501 9.16672 10.6383 9.16672 10.4167V5C9.16672 4.53918 9.53995 4.16672 10 4.16672C10.4601 4.16672 10.8333 4.53918 10.8333 5V10.0717L14.7559 13.9941C15.0816 14.3201 15.0816 14.8466 14.7559 15.1724Z" />
+                </svg>
+              </div>
+              <p class="address__name">График работы:</p>
+              <p class="address__descr">
+                Ежедненвно: 08:00 - 19:00
+              </p>
+            </div>
+          </address>
+          <div class="contacts__shop">
+            <h3 class="contacts__col-title">До встречи</h3>
+            <div class="contacts__gallerys">
+              <div class="contacts__gallery">
+                <p class="contacts__gallery-name">В офисе</p>
+                <div class="swiper contacts__slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide contacts__slide">
+                      <a href="media/img/office-1.jpg" data-fancybox="office">
+                        <img src="media/img/office-1.jpg" alt="изображение офиса">
+                      </a>
+                    </div>
+                    <div class="swiper-slide contacts__slide">
+                      <a href="media/img/office-1.jpg" data-fancybox="office">
+                        <img src="media/img/office-1.jpg" alt="изображение офиса">
+                      </a>
+                    </div>
+                    <div class="swiper-slide contacts__slide">
+                      <a href="media/img/office-1.jpg" data-fancybox="office">
+                        <img src="media/img/office-1.jpg" alt="изображение офиса">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="contacts__btn-prev slider-btn slider-btn-prev">
+                    <svg viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.73387 7.50976L12.49 7.50977L12.49 6.34062L1.73387 6.34062L1.73387 7.50976Z" />
+                      <path
+                        d="M3.67688 4.13858L4.4726 4.93429L2.49922 6.90767L4.4726 8.88104L3.67688 9.67676L0.907791 6.90767L3.67688 4.13858Z" />
+                    </svg>
+                  </div>
+                  <div class="contacts__btn-next slider-btn slider-btn-next">
+                    <svg viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.2661 7.50976L1.51001 7.50977L1.51001 6.34062L12.2661 6.34062L12.2661 7.50976Z" />
+                      <path
+                        d="M10.3231 4.13858L9.5274 4.93429L11.5008 6.90767L9.5274 8.88104L10.3231 9.67676L13.0922 6.90767L10.3231 4.13858Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="contacts__gallery">
+                <p class="contacts__gallery-name">На замере</p>
+                <div class="swiper contacts__slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide contacts__slide">
+                      <a href="media/img/zamer-1.jpg" data-fancybox="zamer">
+                        <img src="media/img/zamer-1.jpg" alt="изображение офиса">
+                      </a>
+                    </div>
+                    <div class="swiper-slide contacts__slide">
+                      <a href="media/img/zamer-1.jpg" data-fancybox="zamer">
+                        <img src="media/img/zamer-1.jpg" alt="изображение офиса">
+                      </a>
+                    </div>
+                    <div class="swiper-slide contacts__slide">
+                      <a href="media/img/zamer-1.jpg" data-fancybox="zamer">
+                        <img src="media/img/zamer-1.jpg" alt="изображение офиса">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="contacts__btn-prev slider-btn slider-btn-prev">
+                    <svg viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.73387 7.50976L12.49 7.50977L12.49 6.34062L1.73387 6.34062L1.73387 7.50976Z" />
+                      <path
+                        d="M3.67688 4.13858L4.4726 4.93429L2.49922 6.90767L4.4726 8.88104L3.67688 9.67676L0.907791 6.90767L3.67688 4.13858Z" />
+                    </svg>
+                  </div>
+                  <div class="contacts__btn-next slider-btn slider-btn-next">
+                    <svg viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.2661 7.50976L1.51001 7.50977L1.51001 6.34062L12.2661 6.34062L12.2661 7.50976Z" />
+                      <path
+                        d="M10.3231 4.13858L9.5274 4.93429L11.5008 6.90767L9.5274 8.88104L10.3231 9.67676L13.0922 6.90767L10.3231 4.13858Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contacts__map">
+            <h3 class="contacts__col-title">Адрес офиса на карте</h3>
+            <iframe class="contacts__frame"
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa047f70522770a3428f04ad4824061f536867b035ed61e1b55d584b596c61419&amp;source=constructor"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__row flex">
+        <div class="footer__logo flex">
+          <a href="index.html" class="footer__logo-img">
+            <img src="media/svg/logo.svg" alt="логотип Мастерская гранита">
+          </a>
+          <p class="footer__logo-descr">
+            Проектирование и монтаж инженерных систем в Москве и Московской области
+          </p>
+        </div>
+        <p class="footer__item">
+          Copyright 2023<br>
+          Все права защищены
+        </p>
+        <button class="footer__item conf">
+          Политика конфиденциальности
+        </button>
+        <p class="footer__item">
+          Сделано с любовью <br>
+          в <a href="https://paradigma.website/" target="_blank">Paradigma.website</a>
+        </p>
+      </div>
+    </div>
+  </footer>
 
   <!-- кнопка прокрутки наверх -->
   <button class="btn-top" aria-label="прокрутить страницу наверх">
@@ -2090,7 +2320,7 @@
           <form action="mailer/send.php" method="POST" class="popup__form" data-download-form-js="pdf/catalog.pdf">
             <input type="hidden" name="formname" value="how">
             <div class="popup__row flex">
-              <label class="popup__label label">
+              <div class="popup__label label">
                 Куда Вам удобнее отправить?
                 <div class="select-social">
                   <div class="popup__select select">
@@ -2118,7 +2348,7 @@
                     </div>
                   </div>
                 </div>
-              </label>
+              </div>
               <label class="popup__label label">
                 Введите номер
                 <input class="popup__input input" type="tel" placeholder="+ 7 (___) ___ - __ - __"
