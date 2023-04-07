@@ -35,7 +35,7 @@ $msg = '
 ';
 } else if ($_POST['formname'] == 'how') {
 $msg = '
-Пользователь просит прислать каталог "Топ-7 советов как выбрать систему отопления раз и навсегда" <br>
+Пользователь скачал каталог "Топ-7 советов как выбрать систему отопления раз и навсегда" <br>
 Телефон: <b> ' . $phone .' </b><br>
 Способ связи: <b> ' . $social . ' </b>
 ';
@@ -66,7 +66,7 @@ $mail->Password = 'password'; //  пароль
 $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
 $mail->setFrom('formsajt987@gmail.com', 'Форма с сайта'); // Ваш Email
-$mail->addAddress('akust0912@gmail.com'); // Email получателя
+$mail->addAddress('gmail@gmail.com'); // Email получателя
 
 // Письмо
 $mail->isHTML(true);

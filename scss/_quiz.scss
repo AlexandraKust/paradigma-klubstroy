@@ -4,15 +4,23 @@
 	padding-bottom: 2.55vw;
 
 	&-only {
-		padding-bottom: 0.5vw;
+		padding-top: 3.7vw;
+		padding-bottom: 1.5vw;
 
-		.quiz__content {
-			padding-top: 5vw;
+		.quiz-top__descr {
+			flex-basis: 100%;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
 		}
 
-		.quiz__subtitle,
-		.quiz__title {
-			display: none;
+		.quiz-top__subtitle {
+			margin-bottom: 0;
+		}
+
+		.quiz-top__item:not(:last-child) {
+			margin-bottom: 0;
 		}
 	}
 
@@ -657,6 +665,24 @@
 	.quiz {
 		padding-top: 4.3rem;
 		padding-bottom: 2.2rem;
+
+		&-only {
+			padding-top: 4rem;
+			padding-bottom: 3rem;
+
+			.quiz-top__descr {
+				flex-direction: column;
+				align-items: start;
+			}
+
+			.quiz-top__subtitle {
+				margin-bottom: 1rem;
+			}
+
+			.quiz-top__item:not(:last-child) {
+				margin-bottom: 0.5rem;
+			}
+		}
 
 		&__title {
 			margin-bottom: 1.8rem;
