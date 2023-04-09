@@ -964,6 +964,9 @@ body.lock {
   z-index: 20;
   width: 100%;
 }
+.header--thanks {
+  position: static;
+}
 .header--fixed, .header--active, .header--lidmagnit {
   background: #fff;
   -webkit-box-shadow: 0 0.42vw 1vw rgba(0, 0, 0, 0.1);
@@ -1163,7 +1166,7 @@ body.lock {
   }
 }
 .nav__bg {
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
   left: 0;
@@ -1171,12 +1174,17 @@ body.lock {
   bottom: 0;
   z-index: -5;
   cursor: pointer;
+  background: #363f4c;
+  opacity: 0;
+  -webkit-transition: opacity 0.7s ease-in-out;
+  -o-transition: opacity 0.7s ease-in-out;
+  transition: opacity 0.7s ease-in-out;
 }
 .nav__body {
   position: fixed;
   top: 0;
   right: -100%;
-  bottom: 0;
+  height: 100vh;
   z-index: 50;
   background: #fff;
   padding: 4.17vw;
@@ -1193,6 +1201,7 @@ body.lock {
 }
 .nav--active .nav__bg {
   z-index: 49;
+  opacity: 0.5;
 }
 .nav--active .nav__body {
   right: 0;
@@ -1222,11 +1231,14 @@ body.lock {
   stroke: #3B82E0;
 }
 .nav__list {
+  height: 30.58vw;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 2vw;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 3vw;
 }
 .nav__link {
@@ -1292,6 +1304,7 @@ body.lock {
     padding-top: 8.7rem;
     gap: 2rem;
     margin-bottom: 5.6rem;
+    height: auto;
   }
   .nav__link {
     font-size: 1.7rem;
@@ -1309,7 +1322,14 @@ body.lock {
 }
 .hero {
   position: relative;
-  padding: 16.25vw 0 6.75vw;
+  padding: 16.25vw 0 4.3vw;
+  max-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
   background: #363f4c url("../media/img/hero-bg.png") 0 0/100% 100% no-repeat;
 }
 .hero--quiz .hero__title {
@@ -1327,7 +1347,8 @@ body.lock {
 }
 .hero--404 {
   padding: 3.54vw 0 1.5625vw;
-  min-height: 49.5vw;
+  max-height: 85.8vh;
+  height: 49.5vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1363,14 +1384,12 @@ body.lock {
   font-size: 0.9375vw;
 }
 .hero--thanks {
-  padding: 8.8vw 0 1.5625vw;
-  min-height: 48.4375vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-height: 85vh;
+  height: 48.4375vw;
+  padding-top: 12vw;
   background: url("../media/img/engineer.png") 77% bottom/auto 36vw no-repeat, url("../media/img/callback-bg.jpg") center 0/auto 100% no-repeat;
 }
 .hero--thanks .hero__row {
@@ -1404,7 +1423,11 @@ body.lock {
 }
 .hero--lidmagnit {
   padding-top: 15.7vw;
-  background: #F1F5F8 url("../media/img/lidmagnit.png") right 406%/59.8vw auto no-repeat;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #F1F5F8 url("../media/img/lidmagnit.png") right bottom/59.8vw auto no-repeat;
+  padding-bottom: 13vw;
 }
 .hero--lidmagnit .hero__row {
   -webkit-box-orient: vertical;
@@ -1569,7 +1592,7 @@ body.lock {
   position: absolute;
   right: 0;
   top: 0;
-  width: 5vw;
+  width: 4.94vw;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1581,6 +1604,34 @@ body.lock {
       -ms-flex-pack: center;
           justify-content: center;
   border-left: 0.052vw solid rgba(226, 231, 238, 0.2);
+}
+.hero__burger.burger--fixed {
+  position: fixed;
+  top: 0;
+  right: -0.4vw;
+  z-index: 20;
+  height: 6.8vw;
+  width: 4.8vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.hero__burger.burger--fixed span {
+  background: #363f4c;
+}
+.hero__burger.burger--fixed span:last-child {
+  position: relative;
+  left: -0.2vw;
 }
 .hero__burger span {
   display: block;
@@ -1615,6 +1666,7 @@ body.lock {
 @media (max-width: 768px) {
   .hero {
     padding: 8.9rem 0 2.9rem;
+    max-height: none;
     background: #363f4c url("../media/img/hero-bg-mobile.png") 0 0/100% 100% no-repeat;
   }
   .hero--quiz {
@@ -1625,6 +1677,7 @@ body.lock {
     top: -2rem;
   }
   .hero--404 {
+    height: auto;
     background: #363f4c url("../media/svg/404.svg") 4.4rem 9.7rem/28rem auto no-repeat;
   }
   .hero--404 .hero__title {
@@ -1639,6 +1692,8 @@ body.lock {
     color: #fff;
   }
   .hero--thanks {
+    height: auto;
+    padding-top: 9rem;
     background: url("../media/img/engineer.png") center bottom/72% auto no-repeat, url("../media/img/callback-bg.jpg") center 0/auto 100% no-repeat;
   }
   .hero--thanks .hero__row {
@@ -1789,11 +1844,14 @@ body.lock {
   }
   .hero__burger.burger--fixed {
     height: 6.1rem;
+    width: 5.8rem;
   }
   .hero__burger.burger--fixed span {
     background: #363f4c;
   }
   .hero__burger span {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     height: 0.2rem;
     border-radius: 0.1rem;
   }
@@ -2900,6 +2958,9 @@ body.lock {
 .services__item:first-child .services__text {
   width: 27vw;
 }
+.services__item:last-child .services__text {
+  padding-right: 1.5vw;
+}
 .services__item:nth-child(2) .services__name p {
   width: 8.23vw;
 }
@@ -2975,40 +3036,33 @@ body.lock {
   text-transform: none;
 }
 .services__text-wrap {
-  position: relative;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
   height: 100%;
   padding: 2.5vw;
 }
-.services__text-wrap::after {
-  content: "";
-  position: absolute;
-  bottom: -3vw;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 8vw;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#363f4c));
-  background: -o-linear-gradient(transparent, #363f4c);
-  background: linear-gradient(transparent, #363f4c);
-  pointer-events: none;
-}
 .services__text {
   padding-right: 2.5vw;
-  padding-bottom: 2vw;
   font-weight: 300;
   font-size: 0.833vw;
   line-height: 140%;
   color: #fff;
   height: 9.27vw;
   overflow-y: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  scrollbar-color: #8494AA #363f4c;
+  scrollbar-width: thin;
 }
 .services__text::-webkit-scrollbar {
-  display: none;
+  width: 0.26vw;
+}
+.services__text::-webkit-scrollbar-track {
+  background-color: #363f4c;
+  border-radius: 0.15625vw;
+}
+.services__text::-webkit-scrollbar-thumb {
+  border-radius: 0.15625vw;
+  background-color: #8494AA;
 }
 .services__text li {
   position: relative;
@@ -3176,6 +3230,9 @@ body.lock {
   .services__item:first-child .services__text {
     width: auto;
   }
+  .services__item:last-child .services__text {
+    padding-right: 1.6rem;
+  }
   .services__item:nth-child(2) .services__text {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3254,16 +3311,9 @@ body.lock {
         flex-basis: 27.6rem;
     padding: 1.6rem;
   }
-  .services__text-wrap::after {
-    bottom: -2.6rem;
-    height: 9rem;
-    background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(40%), to(black));
-    background: -o-linear-gradient(transparent, 40%, black);
-    background: linear-gradient(transparent, 40%, black);
-  }
   .services__text {
     padding-right: 1.6rem;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
     font-size: 1.1rem;
     line-height: 120%;
     height: 11rem;
@@ -4971,6 +5021,7 @@ body.lock {
   position: absolute;
   right: 0;
   top: 1.875vw;
+  font-size: 1.2vw;
   color: #3B82E0;
 }
 .accordion__item.active::after {
@@ -5489,10 +5540,18 @@ body.lock {
   padding-top: 2.2vw;
   padding-bottom: 2.55vw;
 }
-.footer-fixed {
-  position: relative;
+.footer--fixed {
+  position: fixed;
   z-index: 5;
-  margin-top: -8%;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.footer--white {
+  background-color: #fff;
+}
+.footer--special {
+  padding: 2.13vw 0;
 }
 .footer__row {
   -webkit-box-align: center;
@@ -5542,6 +5601,12 @@ body.lock {
 
 @media (max-width: 768px) {
   .footer {
+    padding-top: 1rem;
+  }
+  .footer--fixed {
+    position: static;
+  }
+  .footer--special {
     padding-top: 1rem;
   }
   .footer__row {

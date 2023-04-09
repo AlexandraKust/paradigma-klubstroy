@@ -1,7 +1,7 @@
 // нав.меню
 .nav {
 	&__bg {
-		position: absolute;
+		position: fixed;
 		height: 100%;
 		width: 100%;
 		left: 0;
@@ -9,13 +9,17 @@
 		bottom: 0;
 		z-index: -5;
 		cursor: pointer;
+		background: $main-color;
+		opacity: 0;
+		transition: opacity 0.7s ease-in-out;
 	}
 
 	&__body {
 		position: fixed;
 		top: 0;
 		right: -100%;
-		bottom: 0;
+		// bottom: 0;
+		height: 100vh;
 		z-index: 50;
 		background: #fff;
 		padding: 4.17vw;
@@ -33,6 +37,7 @@
 	&--active {
 		.nav__bg {
 			z-index: 49;
+			opacity: 0.5;
 		}
 
 		.nav__body {
@@ -67,8 +72,10 @@
 	}
 
 	&__list {
+		height: 30.58vw;
 		flex-direction: column;
-		gap: 2vw;
+		justify-content: space-between;
+		// gap: 2vw;
 		margin-bottom: 3vw;
 	}
 
@@ -149,6 +156,7 @@
 			padding-top: 8.7rem;
 			gap: 2rem;
 			margin-bottom: 5.6rem;
+			height: auto;
 		}
 
 		&__link {

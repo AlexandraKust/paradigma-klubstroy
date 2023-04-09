@@ -8,7 +8,6 @@
   <title>KlubStroy</title>
   <link rel="icon" type="image/svg+xml" href="media/favicon.svg">
   <link rel="icon" type="image/png" href="media/favicon.png">
-  <!-- <link rel="stylesheet" href="libs/normalize.css"> -->
   <link rel="stylesheet" href="libs/custom-select.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
@@ -262,10 +261,10 @@
         </ul>
       </div>
       <div class="hero__burger-container">
-        <button class="hero__burger" aria-label="открыть/закрыть навигационное меню">
+        <div class="hero__burger" aria-label="открыть/закрыть навигационное меню">
           <span></span>
           <span></span>
-        </button>
+        </div>
       </div>
     </div>
   </section>
@@ -2811,7 +2810,11 @@
       }
     });
     window.addEventListener('scroll', function () {
+      let heroHeight = document.querySelector('.hero').offsetHeight;
+
       if (header.classList.contains('header--fixed') && window.innerWidth < 768) {
+        burger.classList.add('burger--fixed');
+      } else if (window.pageYOffset > (heroHeight / 2) - 150 && window.innerWidth > 768) {
         burger.classList.add('burger--fixed');
       } else {
         burger.classList.remove('burger--fixed');

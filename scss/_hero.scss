@@ -1,7 +1,10 @@
 // главный блок
 .hero {
   position: relative;
-  padding: 16.25vw 0 6.75vw;
+  padding: 16.25vw 0 4.3vw;
+  max-height: 100vh;
+  display: flex;
+  align-items: end;
   background: $main-color url('../media/img/hero-bg.png') 0 0 / 100% 100% no-repeat;
 
   &--quiz {
@@ -23,7 +26,10 @@
 
   &--404 {
     padding: 3.54vw 0 1.5625vw;
-    min-height: 49.5vw;
+    // padding: 19.25vw 0 17vw;
+    // max-height: 49.5vw;
+    max-height: 85.8vh;
+    height: 49.5vw;
     display: flex;
     align-items: center;
     background: $main-color url('../media/svg/404.svg') 14.22vw 12.7vw / 86vw auto no-repeat;
@@ -54,10 +60,11 @@
   }
 
   &--thanks {
-    padding: 8.8vw 0 1.5625vw;
-    min-height: 48.4375vw;
-    display: flex;
     align-items: center;
+    max-height: 85vh;
+    height: 48.4375vw;
+    padding-top: 12vw;
+
     background: url('../media/img/engineer.png') 77% bottom / auto 36vw no-repeat,
       url('../media/img/callback-bg.jpg') center 0 / auto 100% no-repeat;
 
@@ -90,7 +97,9 @@
 
   &--lidmagnit {
     padding-top: 15.7vw;
-    background: #F1F5F8 url('../media/img/lidmagnit.png') right 406% / 59.8vw auto no-repeat;
+    align-items: center;
+    background: #F1F5F8 url('../media/img/lidmagnit.png') right bottom / 59.8vw auto no-repeat;
+    padding-bottom: 13vw;
 
     .hero__row {
       flex-direction: column;
@@ -252,7 +261,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    width: 5vw;
+    width: 4.94vw;
     height: 100%;
     display: flex;
     align-items: center;
@@ -261,6 +270,29 @@
   }
 
   &__burger {
+
+    &.burger--fixed {
+      position: fixed;
+      top: 0;
+      right: -0.4vw;
+      z-index: 20;
+      height: 6.8vw;
+      width: 4.8vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        background: $main-color;
+
+        &:last-child {
+          position: relative;
+          left: -0.2vw;
+        }
+      }
+    }
+
     span {
       display: block;
       height: 0.25vw;
@@ -297,6 +329,8 @@
 @media (max-width: 768px) {
   .hero {
     padding: 8.9rem 0 2.9rem;
+    // height: auto;
+    max-height: none;
     background: $main-color url('../media/img/hero-bg-mobile.png') 0 0 / 100% 100% no-repeat;
 
     &--quiz {
@@ -309,6 +343,7 @@
     }
 
     &--404 {
+      height: auto;
       background: $main-color url('../media/svg/404.svg') 4.4rem 9.7rem/28rem auto no-repeat;
 
       .hero__title {
@@ -327,6 +362,8 @@
     }
 
     &--thanks {
+      height: auto;
+      padding-top: 9rem;
       background: url('../media/img/engineer.png') center bottom / 72% auto no-repeat,
         url('../media/img/callback-bg.jpg') center 0 / auto 100% no-repeat;
 
@@ -491,6 +528,7 @@
 
       &.burger--fixed {
         height: 6.1rem;
+        width: 5.8rem;
 
         span {
           background: $main-color;
@@ -498,6 +536,7 @@
       }
 
       span {
+        flex-shrink: 0;
         height: 0.2rem;
         border-radius: 0.1rem;
 

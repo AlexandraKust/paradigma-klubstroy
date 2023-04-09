@@ -46,6 +46,15 @@ if (burger) {
 	navBg.addEventListener('click', closeMenu)
 }
 
+// прилипание шапки
+window.addEventListener('scroll', function () {
+	if (window.pageYOffset > 20) {
+		header.classList.add('header--fixed');
+	} else {
+		header.classList.remove('header--fixed');
+	}
+});
+
 // popup
 let requestPopup = document.querySelector('.popup-request');
 let openRequestPopup = document.querySelectorAll('.callback-popup');
@@ -93,17 +102,6 @@ popups.forEach(function (popup) {
 		document.body.classList.remove('lock');
 	})
 })
-
-// прилипание шапки
-window.addEventListener('scroll', function () {
-	// let headerRowHeight = header.offsetHeight;
-
-	if (window.pageYOffset > 20) {
-		header.classList.add('header--fixed');
-	} else {
-		header.classList.remove('header--fixed');
-	}
-});
 
 // checkbox 
 let checkbox = document.querySelectorAll('.agree__checkbox');

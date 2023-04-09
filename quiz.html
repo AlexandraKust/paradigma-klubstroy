@@ -1253,7 +1253,11 @@
 	<script>
 		// прилипание шапки
 		window.addEventListener('scroll', function () {
+			let heroHeight = document.querySelector('.hero').offsetHeight;
+
 			if (header.classList.contains('header--fixed') && window.innerWidth < 768) {
+				burger.classList.add('burger--fixed');
+			} else if (window.pageYOffset > (heroHeight / 2) - 150 && window.innerWidth > 768) {
 				burger.classList.add('burger--fixed');
 			} else {
 				burger.classList.remove('burger--fixed');
