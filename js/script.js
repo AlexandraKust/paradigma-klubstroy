@@ -34,7 +34,10 @@ if (burger) {
 
 		let links = nav.querySelectorAll('.nav__link');
 		links.forEach(function (link) {
-			link.addEventListener('click', closeMenu)
+			link.addEventListener('click', function () {
+				closeMenu();
+				header.classList.remove('header--active');
+			})
 		})
 
 		if (window.innerWidth < 768 && !header.classList.contains('header--fixed')) {

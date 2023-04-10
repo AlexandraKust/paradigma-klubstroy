@@ -532,6 +532,10 @@
 
         span {
           background: $main-color;
+
+          &:last-child {
+            left: -0.2rem;
+          }
         }
       }
 

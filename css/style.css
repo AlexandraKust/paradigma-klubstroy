@@ -1849,6 +1849,9 @@ body.lock {
   .hero__burger.burger--fixed span {
     background: #363f4c;
   }
+  .hero__burger.burger--fixed span:last-child {
+    left: -0.2rem;
+  }
   .hero__burger span {
     -ms-flex-negative: 0;
         flex-shrink: 0;
